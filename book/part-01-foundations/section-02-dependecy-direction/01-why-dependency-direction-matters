@@ -1,0 +1,77 @@
+# Why Dependency Direction Matters
+
+Dependency direction is one of the most important—and most frequently misunderstood—
+architectural decisions in software systems.
+
+When dependency direction is left unconstrained, systems tend to degrade into tightly
+coupled structures where change becomes risky and costly. This subsection explains why
+explicit dependency direction is essential for maintaining architectural integrity over
+time.
+
+---
+
+## Unrestricted Dependencies Lead to Entanglement
+
+In systems without defined dependency direction, any component can reference any other.
+While this may appear flexible initially, it leads to increasing entanglement as the
+system grows.
+
+Over time, components become mutually dependent, making it difficult to understand
+responsibilities or isolate the impact of change.
+
+Dependency direction exists to prevent this form of architectural erosion.
+
+---
+
+## Change Propagation Is a Structural Problem
+
+When dependencies flow indiscriminately, change propagates unpredictably.
+
+A modification in one part of the system may require changes in many unrelated areas,
+not because of business requirements, but because of structural coupling.
+
+By constraining dependency direction, change propagation becomes predictable and
+contained within defined boundaries.
+
+---
+
+## Stability Depends on Dependency Control
+
+Stable systems depend on stable dependencies.
+
+If high-level policies depend on volatile implementation details, stability is lost.
+Conversely, when volatile details depend on stable abstractions, the system can evolve
+without constant disruption.
+
+Dependency direction ensures that stability flows inward rather than outward.
+
+---
+
+## Dependency Direction Enables Independent Work
+
+Clear dependency direction allows teams to work independently within different parts
+of the system.
+
+When dependencies are constrained, teams can modify implementations without coordinating
+changes across the entire codebase. This is critical for scaling development efforts.
+
+---
+
+## Dependency Direction Is a Design Commitment
+
+Dependency direction does not emerge accidentally. It must be deliberately designed and
+consistently enforced.
+
+This architecture treats dependency direction as a core design commitment rather than a
+byproduct of code organization. Subsequent subsections explain how dependency direction
+is enforced and how it shapes the layered model.
+
+---
+
+<p align="center">
+  <a href="./README.md">◀ Back to Section Overview</a>
+  &nbsp;|&nbsp;
+  <a href="../../../index.md">Index</a>
+  &nbsp;|&nbsp;
+  <a href="./02-dependency-vs-call-direction.md">Next Subsection ▶</a>
+</p>
