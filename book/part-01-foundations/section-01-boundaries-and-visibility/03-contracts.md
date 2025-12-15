@@ -1,99 +1,96 @@
-# Contracts as Architectural Firewalls
+# Enforcing Dependency Direction
 
-Enforced visibility alone is insufficient without a controlled mechanism for interaction
-between boundaries. Systems still need to communicate, coordinate, and exchange intent.
+Defining dependency direction is only effective if it is consistently enforced.
+Architectural rules that rely on discipline or convention eventually erode as systems
+grow and teams change.
 
-In this architecture, **contracts** provide that mechanism.
-
-Contracts act as architectural firewalls: they define what is allowed to cross a boundary
-and, just as importantly, what is not.
-
----
-
-## The Role of Contracts in Architecture
-
-A contract represents a deliberately designed surface between two architectural boundaries.
-
-It defines:
-
-- What capabilities are exposed
-- What responsibilities are accepted
-- What dependencies are permitted
-
-Anything not included in the contract is, by definition, not part of the architecture’s
-public surface.
+This subsection explains how dependency direction is enforced structurally and why
+enforcement must be built into the architecture itself.
 
 ---
 
-## Contracts Are Not Convenience Abstractions
+## Enforcement Through Structure
 
-In many systems, interfaces exist primarily to enable testing or decouple implementations.
-While contracts can serve these purposes, their role in this architecture is broader and
-more fundamental.
+In this architecture, dependency direction is enforced through structural constraints
+rather than policy.
 
-Contracts exist to:
+These constraints include:
 
-- Enforce architectural boundaries
-- Limit visibility intentionally
-- Provide stability as implementations evolve
+- Explicit project references
+- Contract-based boundaries
+- Clear separation between abstraction and implementation
+- Centralized composition
 
-They are architectural artifacts, not merely coding techniques.
-
----
-
-## Firewalls, Not Facades
-
-A facade typically simplifies usage by hiding complexity. A contract does not hide
-complexity—it **restricts access**.
-
-This distinction is critical. Contracts do not attempt to make everything easy. They
-attempt to make only the *correct interactions possible*.
-
-By narrowing the interaction surface, contracts reduce coupling and prevent architectural
-drift.
+By encoding dependency rules into the structure of the system, violations become
+impossible rather than discouraged.
 
 ---
 
-## Stability and Change
+## Contracts as Dependency Anchors
 
-Contracts are designed to be stable over time.
+Contracts serve as the stable anchors around which dependencies are organized.
 
-Implementations behind a contract may change frequently, but the contract itself evolves
-slowly and deliberately. This stability enables independent change within boundaries while
-preserving system integrity.
+Both high-level policy and low-level implementation depend on the same contract, but
+neither depends on the other directly. This shared dependency point enforces inversion
+and preserves independence.
 
-When a contract changes, the architectural impact is explicit and reviewable.
-
----
-
-## Contracts as a Design Tool
-
-Designing contracts forces architectural clarity.
-
-It requires architects and developers to answer:
-
-- What must be exposed?
-- Who is allowed to depend on this?
-- What responsibilities belong on each side of the boundary?
-
-These questions are architectural in nature and cannot be deferred to implementation.
+Contracts are intentionally placed at boundary edges rather than embedded within
+implementations.
 
 ---
 
-## Transition to Dependency Direction
+## Preventing Backward Dependencies
 
-Contracts define *what* can cross a boundary. Dependency direction determines *who depends
-on whom*.
+Backward dependencies—where higher-level components depend on lower-level details—are
+one of the most common sources of architectural decay.
 
-The next section expands on this relationship by examining dependency direction as a
-foundational architectural rule.
+Structural enforcement prevents these dependencies by:
+
+- Restricting project visibility
+- Limiting reference paths
+- Ensuring implementations are not accessible outside their boundary
+
+If a dependency cannot be expressed structurally, it cannot exist in the system.
+
+---
+
+## Centralized Composition
+
+Composition is the single point where dependency direction is intentionally crossed.
+
+Rather than allowing components to compose themselves, this architecture centralizes
+composition in a designated location. This ensures that dependency inversion is explicit,
+reviewable, and consistent.
+
+Centralized composition completes the enforcement model by allowing controlled wiring
+without violating architectural rules.
+
+---
+
+## Enforcement Enables Trust
+
+When dependency direction is enforced structurally, teams no longer need to rely on
+constant vigilance during code reviews.
+
+Architectural correctness becomes a property of the system rather than a matter of
+individual discipline. This enables trust, scalability, and long-term maintainability.
+
+---
+
+## Transition to the Reference Architecture
+
+With boundaries, visibility, and dependency direction established, the architecture is
+now ready to define concrete layers and responsibilities.
+
+The next part of this book introduces the reference architecture and explains how these
+foundational principles are applied in practice.
 
 ---
 
 <p align="center">
-  <a href="./subsection-02-enforced-visibility.md">◀ Previous Subsection</a>
+  <a href="./subsection-02-dependency-vs-call-direction.md">◀ Previous Subsection</a>
   &nbsp;|&nbsp;
   <a href="../../../index.md">Index</a>
   &nbsp;|&nbsp;
-  <a href="../section-dependency-direction/README.md">Next Section ▶</a>
+  <a href="../../part-02-reference-architecture/README.md">Next Part ▶</a>
 </p>
