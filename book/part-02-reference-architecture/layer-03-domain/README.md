@@ -1,91 +1,86 @@
-# Section — Domain Layer
+# Layer 03 — Domain
 
-The Domain Layer contains the business concepts, rules, and invariants that define the
-problem space the application exists to serve.
+## Overview
 
-This layer represents the *core meaning* of the system. It is independent of user
-interfaces, application workflows, and technical infrastructure.
+The Domain layer represents the **core business model** of the application.
 
----
+It contains the concepts, rules, and structures that define *what the business is*, independent of how the application is delivered, orchestrated, or persisted.
 
-## Purpose of the Domain Layer
-
-The purpose of the Domain Layer is to:
-
-- Express business concepts and terminology
-- Enforce business rules and invariants
-- Protect business integrity over time
-
-The Domain Layer exists to ensure that business logic remains correct regardless of how
-the application is accessed or implemented.
+In this architecture, the Domain is intentionally **simple, expressive, and isolated**.
 
 ---
 
-## What Belongs in the Domain Layer
+## The Domain in This Architecture
 
-The Domain Layer may contain:
+The Domain layer exists to model business concepts, not application behavior.
 
-- Entities and value objects
-- Domain services
-- Business rules and invariants
-- Domain events
-- Domain-specific contracts
+It is composed exclusively of:
 
-All logic in this layer should be directly related to business meaning.
+- **Entity models**  
+  Objects with identity and lifecycle
 
----
+- **Value objects**  
+  Immutable objects that describe concepts or measurements
 
-## What Does Not Belong in the Domain Layer
+- **Enumerations**  
+  Controlled sets of domain-specific values
 
-The Domain Layer must not contain:
-
-- Application orchestration or workflows
-- UI or transport concerns
-- Persistence or infrastructure logic
-- Framework-specific dependencies
-- Knowledge of how the application is executed
-
-If logic depends on *when* or *how* something is invoked, it does not belong here.
+These elements describe the business in its own language, without reference to infrastructure, persistence, or delivery concerns.
 
 ---
 
-## Dependency and Visibility Rules
+## What Does Not Belong in the Domain
 
-The Domain Layer:
+In this architecture, the Domain layer deliberately does **not** contain:
 
-- Has no dependencies on other layers
-- Defines contracts that other layers depend on
-- Is not aware of application workflows or infrastructure details
+- Repository interfaces
+- Infrastructure abstractions
+- Application orchestration
+- Framework dependencies
+- Technical concerns of any kind
 
-This independence ensures that business logic remains stable even as the surrounding
-system evolves.
+All boundary-crossing interfaces live outside the Domain, in dedicated contract Architectural Units.
 
----
-
-## Business Integrity as a Primary Concern
-
-The Domain Layer is the final authority on business correctness.
-
-Application behavior must conform to domain rules, not the other way around. By isolating
-these rules, the architecture prevents business logic from being diluted or bypassed
-by technical concerns.
+This choice preserves the Domain as a **pure representation of business intent**, not a coordination mechanism.
 
 ---
 
-## Preparing for the Infrastructure Layer
+## Architectural Units in This Layer
 
-While the Domain Layer defines *what must be true*, it does not concern itself with *how*
-those truths are persisted, communicated, or integrated.
+The Domain layer contains the following Architectural Unit:
 
-The next section introduces the Infrastructure Layer and explains how technical concerns
-are isolated without leaking into the core of the system.
+- **AU-01 — Domain Model Architectural Unit**  
+  The authoritative definition of business entities, value objects, and enumerations
+
+This AU is explored through its structural responsibilities rather than interaction patterns.
+
+---
+
+## What You Will Learn in This Layer
+
+The pages in this layer explain:
+
+- How business concepts are modeled
+- Why the Domain remains free of interfaces and abstractions
+- How purity enables long-term flexibility
+- How other layers depend on the Domain without coupling it outward
+
+This layer focuses on **expression and integrity**, not execution.
+
+---
+
+## How to Read This Layer
+
+You may read this layer sequentially or use it as a reference when reasoning about business rules and model design.
+
+All examples and explanations are architectural in nature and avoid implementation detail.
 
 ---
 
 <p align="center">
-  <a href="../section-application-layer/README.md">◀ Previous Section</a>
+  <a href="../layer-02-application/README.md">◀ Back</a>
   &nbsp;|&nbsp;
-  <a href="../../../index.md">Index</a>
+  <a href="../../index.md">Index</a>
   &nbsp;|&nbsp;
-  <a href="../section-infrastructure-layer/README.md">Next Section ▶</a>
+  <a href="./au-01-domain-model/README.md">Next ▶</a>
 </p>
