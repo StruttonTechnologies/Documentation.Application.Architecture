@@ -1,0 +1,98 @@
+# Domain Purity
+
+## Responsibility
+
+The Domain Model Architectural Unit is responsible for remaining **pure, isolated, and free from technical concerns**.
+
+The Domain expresses business meaning exclusively. It does not depend on infrastructure, frameworks, delivery mechanisms, or boundary-crossing abstractions.
+
+Domain Purity ensures that the business model remains portable, understandable, and authoritative.
+
+---
+
+## Why This Responsibility Exists
+
+The value of a domain model lies in its clarity.
+
+When technical concerns enter the domain—such as repository interfaces, framework abstractions, or delivery assumptions—the business model becomes harder to reason about. Concepts lose focus, rules become obscured, and change becomes risky.
+
+Domain Purity exists to ensure that:
+
+- Business concepts remain expressive and intentional
+- The domain can be understood without technical context
+- Architectural dependencies point inward, not outward
+
+A pure domain preserves the separation between *what the business is* and *how the system is built*.
+
+---
+
+## Architectural Implications
+
+When the domain remains pure:
+
+- The domain has no dependencies on other layers
+- Business concepts can be reused across applications
+- Technical decisions do not influence business modeling
+- Boundaries are enforced structurally rather than conventionally
+
+The domain becomes a **stable core** around which the rest of the system evolves.
+
+---
+
+## What This Responsibility Protects
+
+Domain Purity protects:
+
+- **Conceptual clarity**  
+  Business meaning is not diluted by technical detail
+
+- **Architectural flexibility**  
+  Infrastructure and delivery can change independently
+
+- **Long-term maintainability**  
+  The domain remains easy to understand and evolve
+
+- **Correct dependency direction**  
+  All other layers depend on the domain, not the reverse
+
+These protections preserve the domain as the foundation of the architecture.
+
+---
+
+## Consequences of Violation
+
+When technical concerns leak into the domain:
+
+- Business concepts become coupled to implementation details
+- Refactoring becomes risky and expensive
+- The domain loses expressive power
+- Architectural boundaries erode silently
+
+Over time, the domain ceases to represent the business and instead reflects the current state of the system’s technology.
+
+---
+
+## Relationship to Other Responsibilities
+
+Domain Purity reinforces and enables:
+
+- **Entity Integrity**  
+  Entities enforce rules without relying on external services
+
+- **Value Object Immutability**  
+  Values remain trustworthy when free from side effects
+
+- **Explicit Invariants**  
+  Rules remain authoritative when enforced within the model
+
+Together, these responsibilities ensure that the domain model remains expressive, correct, and resilient.
+
+---
+
+<p align="center">
+  <a href="./03-explicit-invariants.md">◀ Back</a>
+  &nbsp;|&nbsp;
+  <a href="../../../index.md">Index</a>
+  &nbsp;|&nbsp;
+  <a href="../README.md">Next ▶</a>
+</p>
