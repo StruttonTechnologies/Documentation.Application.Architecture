@@ -87,6 +87,21 @@ foundational principles are applied in practice.
 
 ---
 
+## Composition as Boundary Enforcement
+
+Architectural boundaries are not enforced solely through contracts and dependency direction.
+
+They are also enforced through **centralized composition**, where concrete implementations are wired explicitly at the application boundary.
+
+By confining composition to a single, well-defined location, the architecture ensures that:
+- Layers remain isolated
+- Dependencies remain directional
+- Implementations remain swappable
+
+Composition is therefore not an incidental startup concern, but an intentional enforcement mechanism that supports all other architectural rules.
+
+---
+
 <p align="center">
   <a href="./subsection-02-dependency-vs-call-direction.md">◀ Previous Subsection</a>
   &nbsp;|&nbsp;
