@@ -77,4 +77,4 @@ The pages in this AU explain:
 
 - [01 — Layer Registrars](01-layer-registrars.md)
 - [02 — Centralized Composition](02-centralized-composition.md)
-- [03 — Program Entry Point](03-program-entry-point.m)
+- [03 — Program Entry Point](03-program-entry-point.md)
