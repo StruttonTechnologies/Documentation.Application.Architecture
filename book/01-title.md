@@ -1,5 +1,3 @@
-# Title Page
-
 # Application Architecture
 
 ## A Practical Guide to Boundaries, Layers, and Architectural Thinking
