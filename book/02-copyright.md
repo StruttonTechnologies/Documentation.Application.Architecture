@@ -1,14 +1,17 @@
+# Copyright
+
 © 2026 Shawn Strutton
 
 All rights reserved.
 
-No part of this publication may be reproduced, distributed, or transmitted
-in any form or by any means without prior written permission, except for
-brief quotations used in critical reviews and noncommercial contexts
-permitted by copyright law.
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means without prior written permission from the author, except for brief quotations used in reviews, commentary, education, or other uses permitted by applicable copyright law.
 
-This book presents a reference architecture and architectural opinions
-intended for professional and educational purposes. No warranties,
-express or implied, are provided.
+This book presents architectural concepts, patterns, and opinions intended for professional and educational use. It reflects the author's practical experience and design philosophy. It does not constitute legal, financial, regulatory, or contractual advice.
 
-First edition.
+The examples, diagrams, terminology, and organizational models presented in this book are provided to support understanding of software architecture. They are intended to clarify design principles and decision-making, not to prescribe a single universal solution for every system.
+
+**First edition.**
+
+---
+
+[← Back](01-title.md) | [Table of Contents](04-table-of-contents.md) | [Next →](03-preface.md)
