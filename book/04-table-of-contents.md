@@ -1,6 +1,5 @@
 # Table of Contents
 
-## Front Matter
 
 - [Title](01-title.md)
 - [Copyright](02-copyright.md)
