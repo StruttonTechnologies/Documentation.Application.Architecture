@@ -8,6 +8,7 @@ The content is centered around a structured architecture model that emphasizes c
 
 ## 📘 Architecture Book
 
+
 A structured, end-to-end guide to the architecture:
 
 - [Application Architecture Book](./book/README.md)
@@ -19,7 +20,9 @@ This book explains:
 - how components interact through defined contracts  
 - how the architecture scales across different application styles  
 
-If you are new to this repository, this is the best place to start.
+<p align="left" style="margin-left:30px">
+  <img src="/assets/images/cover.jpeg" width="250"/>
+</p>
 
 ---
 
