@@ -52,7 +52,6 @@ The architecture described in this repository emphasizes:
 
 - Core.ToolKit  
 - Core.Identity  
-- Documentation.Core.ToolKits  
 
 ---
 
