@@ -74,4 +74,4 @@ Good architecture is not measured by how fashionable it sounds. It is measured b
 
 ---
 
-[← Back](04-table-of-contents.md) | [Table of Contents](04-table-of-contents.md) | [Next →](01-what-is-software-architecture.md)
+[← Back](04-table-of-contents.md) | [Table of Contents](04-table-of-contents.md) | [Next →](04-table-of-contents.md)
