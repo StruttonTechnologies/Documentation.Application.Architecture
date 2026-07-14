@@ -15,4 +15,4 @@ Strutton Technologies
 
 ---
 
-[← Back](02-copyright.md) | [Table of Contents](04-table-of-contents.md) | [Next →](04-table-of-contents.md)
+[← Back](02-copyright.md) | [Table of Contents](04-table-of-contents.md) | [Next →](05-intoduction.md)
