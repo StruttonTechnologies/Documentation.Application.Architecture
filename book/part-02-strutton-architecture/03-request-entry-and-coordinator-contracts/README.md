@@ -1,22 +1,24 @@
 # Chapter 3 — Request Entry and Coordinator Contracts
 
-In the previous chapter, ApplicationComposition was introduced as the mechanism used to assemble the system and control visibility.
+The previous chapter introduced ApplicationComposition and explained how the application is assembled while preserving architectural boundaries through controlled visibility.
 
-The next step is understanding how a request enters the system.
+Once the application has been assembled, the next question naturally follows:
 
-A request must be able to reach execution logic, but it must do so without exposing implementation details or allowing architectural boundaries to be bypassed.
+**How does a request enter the architecture?**
 
-This chapter introduces how requests are handled through Coordinator contracts.
+This chapter introduces Coordinator contracts, the architectural entry point through which all requests enter the Application layer. Rather than exposing execution directly, Coordinator contracts define the interactions that are intentionally made available to the rest of the application.
 
 ## In this chapter, you will learn
 
-- how requests enter the system through the Presentation layer  
-- how Coordinator contracts define the entry point into execution  
-- how visibility is controlled to prevent direct access to handlers  
-- why this approach enforces architectural boundaries  
+- how requests enter the architecture
+- the responsibility of Coordinator contracts
+- how Coordinator contracts preserve controlled visibility
+- why execution begins through contracts rather than implementation
 
-This chapter focuses on how interaction begins. The next chapter will explore how execution is handled once the request has entered the system.
+By the end of this chapter, you will understand why request entry is treated as an architectural responsibility and how Coordinator contracts reinforce the boundaries established by the architecture.
 
 ---
 
-[← Back](../02-application-composition/05-common-failure-modes.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](01-request-entry.md)
+[← Application Composition](../02-application-composition/05-common-architectural-mistakes.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Request Entry →](01-request-entry.md)

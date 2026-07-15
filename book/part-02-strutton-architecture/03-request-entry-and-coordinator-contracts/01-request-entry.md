@@ -1,21 +1,23 @@
 # Request Entry
 
-A request begins in the Presentation layer.
+Every request begins in the Presentation layer.
 
-The API receives input from the outside world and translates that input into a form the system can understand. At this point, the system does not yet execute any business logic.
+The responsibility of the Presentation layer is to receive interaction from the outside world and describe that interaction in a form the architecture can understand. At this point, no business execution has begun.
 
-Instead, the request is transformed into a command or query.
+Instead, the request is represented as a command or query.
 
-This command or query represents an intention. It defines what the system should do, but not how it should do it.
+A command or query describes **what** the caller wants the system to do without describing **how** that work will be performed. It represents intent rather than execution.
 
-This is an important distinction.
+This distinction is fundamental.
 
-The Presentation layer does not know how the request will be handled. It only knows how to describe the request in a way that the system can process.
+The Presentation layer is responsible for describing the request, not executing it. It does not know how the request will be fulfilled, nor does it require knowledge of the architectural units responsible for execution.
 
-Once the command or query is created, it is sent into the Application layer.
+Once the request has been described, it enters the Application layer through the architectural entry point defined by the Coordinator contracts.
 
-From this point forward, execution is controlled by the architecture.
+From this point forward, execution is guided by the architecture rather than the Presentation layer.
 
 ---
 
-[← Back](README.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](02-coordinator-contracts.md)
+[← Chapter Overview](README.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Coordinator Contracts →](02-coordinator-contracts.md)

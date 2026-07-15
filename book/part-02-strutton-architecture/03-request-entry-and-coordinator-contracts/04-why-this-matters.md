@@ -1,21 +1,23 @@
 # Why This Matters
 
-Without controlled request entry, architectural boundaries are easily bypassed.
+Without controlled request entry, architectural boundaries become easy to bypass.
 
-If the Presentation layer has access to execution logic, it can call handlers or services directly. This may seem efficient, but it leads to tightly coupled systems and inconsistent interaction patterns.
+If the Presentation layer can access execution logic directly, it can invoke handlers, services, or other implementation details without following the intended architectural path. While this may appear convenient, it gradually weakens the architecture by introducing unintended dependencies and tighter coupling.
 
-Over time, this weakens the architecture.
+Over time, architectural consistency begins to erode.
 
-Different parts of the system begin to interact in different ways. Some follow the intended structure, while others bypass it. This makes the system harder to understand and maintain.
+Different parts of the application interact with the system in different ways. Some follow the intended architectural path, while others bypass it entirely. As these inconsistencies accumulate, the architecture becomes more difficult to understand, maintain, and evolve.
 
 Coordinator contracts prevent this.
 
-They define a single, consistent way for requests to enter the system. They ensure that execution is always triggered through the same controlled path.
+They establish a single, consistent architectural entry point through which every request enters the Application layer. By ensuring that all requests begin through the same controlled interaction path, the architecture preserves its boundaries and reinforces the intended flow of execution.
 
-This keeps interaction predictable.
+The result is a more predictable and maintainable architecture.
 
-It also ensures that validation, mapping, and other cross-cutting concerns are consistently applied.
+Rather than relying solely on developer discipline to ensure requests follow the correct path, the architecture reinforces that behavior through its structure.
 
 ---
 
-[← Back](03-controlled-access-to-execution.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](05-common-failure-modes.md)
+[← Controlled Access to Execution](03-controlled-access-to-execution.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Common Failure Modes →](05-common-failure-modes.md)

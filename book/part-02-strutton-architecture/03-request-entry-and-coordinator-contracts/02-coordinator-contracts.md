@@ -1,23 +1,25 @@
 # Coordinator Contracts
 
-Coordinator contracts define how requests enter the Application layer.
+Coordinator contracts define the architectural boundary between interaction and execution.
 
-Commands and queries are part of these contracts. They provide a structured way for the Presentation layer to communicate with the system without having access to its internal implementation.
+They provide the only intended entry point into the Application layer, allowing the Presentation layer to describe requests without requiring knowledge of how those requests are executed.
 
-These contracts are visible to the Presentation layer.
+Commands and queries are defined by these contracts. They represent the requests exchanged between the Presentation layer and the Application layer while keeping execution details hidden behind the architectural boundary.
 
-This allows the API to create and send requests without knowing how those requests are handled.
+Coordinator contracts are intentionally visible to the Presentation layer.
 
-The implementation of those requests is not visible.
+This allows requests to be created and submitted without exposing the handlers, validation, orchestration, or execution logic responsible for fulfilling them.
 
-Handlers, validation, and execution logic exist in implementation assemblies that are not accessible to the Presentation layer.
+This separation is fundamental to the architecture.
 
-This separation is intentional.
+Interaction occurs through explicit contracts.
 
-It ensures that interaction occurs through defined contracts rather than direct access to execution logic.
+Execution remains hidden behind implementation.
 
-Coordinator contracts act as the boundary between interaction and execution.
+By separating these responsibilities, the architecture preserves controlled visibility while reinforcing the intended flow of execution.
 
 ---
 
-[← Back](01-request-entry.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](03-controlled-access-to-execution.md)
+[← Request Entry](01-request-entry.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Controlled Access to Execution →](03-controlled-access-to-execution.md)

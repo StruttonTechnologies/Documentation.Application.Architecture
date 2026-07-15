@@ -1,23 +1,19 @@
-# Common Failure Modes
+# Common Architectural Mistakes
 
-Request entry is often not controlled.
+Request entry is sometimes treated as a convenience rather than an architectural responsibility.
 
-One common issue is allowing the Presentation layer to reference implementation assemblies directly. This makes it possible to call execution logic without going through contracts.
+One common mistake is allowing the Presentation layer to reference implementation assemblies directly. Doing so makes it possible to bypass the intended architectural entry point and interact directly with execution logic.
 
-Another failure mode is bypassing commands and queries.
+Another mistake is allowing requests to enter the Application layer through multiple paths. When different parts of the system use different interaction patterns, the architecture gradually loses consistency and becomes more difficult to understand.
 
-Instead of using structured requests, developers may call services directly. This leads to inconsistent patterns and weakens the architecture.
+A third mistake is exposing execution details instead of interaction contracts. When implementation becomes visible outside the architectural boundary, coupling increases and architectural responsibilities become blurred.
 
-There is also a tendency to mix interaction and execution.
+Each of these decisions weakens the architecture by reducing controlled visibility and allowing architectural boundaries to be bypassed.
 
-Validation, mapping, and business logic may be performed in the Presentation layer. This breaks the separation of concerns and makes the system harder to maintain.
-
-All of these issues lead to the same outcome.
-
-The architecture becomes inconsistent and difficult to enforce.
-
-Coordinator contracts only provide value when they are consistently used as the entry point into execution.
+Coordinator contracts exist to prevent these problems by defining a single, consistent architectural entry point through which every request enters the Application layer.
 
 ---
 
-[← Back](04-why-this-matters.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../04-coordinator-implementation/README.md)
+[← Why This Matters](04-why-this-matters.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Coordinator Implementation →](../04-coordinator-implementation/README.md)

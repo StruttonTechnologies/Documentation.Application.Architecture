@@ -1,19 +1,21 @@
 # Controlled Access to Execution
 
-Execution logic is not directly accessible from the Presentation layer.
+Execution logic is intentionally hidden from the Presentation layer.
 
-Even though the system must execute requests, that execution is intentionally hidden behind contracts and infrastructure such as MediatR.
+Although every request must ultimately be executed, the Presentation layer never interacts directly with the execution logic responsible for fulfilling that request.
 
-When a command or query is sent, the system resolves the appropriate handler internally. The Presentation layer does not know which handler is used or how the request is processed.
+Instead, execution occurs behind the architectural boundary established by the Coordinator contracts.
 
-This prevents direct access.
+When a request enters the Application layer, the architecture determines how that request is fulfilled. The Presentation layer neither knows nor needs to know which architectural units participate in the execution process.
 
-Without this control, the Presentation layer could reference handler implementations directly, bypassing architectural boundaries and introducing tight coupling.
+This controlled access is fundamental to the architecture.
 
-By restricting access, the architecture enforces the intended flow.
+Without it, execution logic could be accessed directly, architectural boundaries could be bypassed, and tight coupling would gradually replace the intended dependency structure.
 
-Requests must pass through contracts, and execution must occur within the Application layer. This ensures that all interaction follows the same controlled path.
+By controlling access to execution, the architecture reinforces a single, consistent interaction path. Requests enter through contracts, execution remains behind implementation, and architectural responsibilities remain clearly separated.
 
 ---
 
-[← Back](02-coordinator-contracts.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](04-why-this-matters.md)
+[← Coordinator Contracts](02-coordinator-contracts.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Why This Matters →](04-why-this-matters.md)
