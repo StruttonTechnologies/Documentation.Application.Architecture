@@ -1,25 +1,35 @@
-# Chapter 1 — Architecture Overview
+# Part 2 — Strutton Technologies Application Architecture
 
-The previous part of this book introduced the architectural concepts needed to understand the application architecture presented throughout this part. This chapter is where those concepts begin to come together.
+Part 1 introduced the foundational concepts of software architecture.
 
-Before examining the individual architectural units, it is important to understand the architecture as a whole. Every responsibility, boundary, dependency, and interaction discussed in the following chapters exists within a larger system. Seeing that system first provides the context needed to understand why each architectural decision was made.
+Layers, boundaries, dependency direction, and contracts established a conceptual model for organizing responsibilities and controlling interaction within a software system.
 
-This chapter presents a high-level view of the Strutton Technologies Application Architecture. It introduces the major architectural units, explains how requests move through the system, and identifies the guiding principles that shape every design decision discussed throughout the remainder of this part.
+This part applies those concepts to a complete application architecture.
 
-The goal of this chapter is not to explain every architectural unit in detail. Those responsibilities are intentionally reserved for the chapters that follow. Instead, this chapter establishes the mental model that will be refined as each architectural unit is examined individually.
+Rather than introducing new architectural principles, it demonstrates how those principles work together to create a cohesive, maintainable, and self-enforcing system.
 
-By the end of this chapter, you should understand:
+Each chapter focuses on a specific architectural responsibility and the role it plays within the overall application.
 
-- the overall structure of the architecture
-- the primary architectural units and their responsibilities
-- how requests flow through the system
-- the architectural principles that guide the design
-- how the individual chapters fit together to form a complete application architecture
+## In this part, you will learn
 
-The following sections establish the foundation for the remainder of Part 2. As you continue through the book, each architectural unit will be examined in detail, explaining not only what it does, but why it exists and the architectural responsibility it fulfills.
+- how the application is composed while controlling visibility
+- how requests enter the system through architectural contracts
+- how execution is coordinated through the Coordinator and Orchestration layers
+- how persistence is abstracted through repository contracts
+- how data moves through the system using DTOs and entities
+- how the Presentation layer remains separate from application behavior
+- how the architecture enforces itself through structure rather than convention
+
+The goal is not simply to describe an application.
+
+It is to demonstrate how architectural principles become an executable architectural model.
+
+Throughout this part, every major responsibility is assigned a clear owner, every interaction follows defined architectural contracts, and every boundary exists to preserve the long-term integrity of the system.
+
+By the end of this part, you will understand not only what the Strutton Technologies Application Architecture looks like, but why each responsibility exists and how those responsibilities work together to create a predictable, maintainable software system.
 
 ---
 
-[← Part 2 Overview](../README.md) |
-[Table of Contents](../../04-table-of-contents.md) |
-[High-Level Structure →](01-high-level-structure.md)
+[← Part 1 Summary](../part-01-foundations-of-architecture/99-part-01-summary/README.md) |
+[Table of Contents](../04-table-of-contents.md) |
+[Architecture Overview →](01-architecture-overview/README.md)
