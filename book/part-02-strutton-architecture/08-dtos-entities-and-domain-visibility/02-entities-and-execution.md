@@ -18,4 +18,4 @@ This separation preserves the integrity of the domain while allowing interaction
 
 [← DTOs and Interaction](01-dtos-and-interaction.md) |
 [Table of Contents](../../04-table-of-contents.md) |
-[Domain Visibility →](03-domain-visibility.md)
+[Domain Visibility Rules →](03-domain-visibility-rules.md)
