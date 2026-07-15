@@ -1,24 +1,24 @@
 # Why Layers Matter
 
-Without layers, responsibility spreads.
+Without architectural layers, responsibilities gradually spread throughout the system.
 
-At first, the system may still function. Code is added where it is convenient. Logic is reused in ways that seem efficient in the moment. Over time, the structure begins to weaken.
+At first, the system may still function. Code is placed where it is convenient. Functionality is reused in ways that seem efficient in the moment. Over time, however, the architectural structure begins to weaken.
 
-Responsibilities overlap. It becomes harder to tell where logic belongs. The same type of behavior appears in multiple places.
+Responsibilities begin to blur. It becomes increasingly difficult to determine where new functionality belongs. Similar responsibilities appear in multiple places, and architectural boundaries become less distinct.
 
-This makes the system harder to understand.
+As this happens, the system becomes harder to understand.
 
-It also makes it harder to change.
+It also becomes harder to change.
 
-When responsibility is not clearly grouped, a change in one area may require updates in several others. It becomes difficult to predict the impact of a change because the structure no longer provides clear boundaries for behavior.
+When responsibilities are no longer clearly organized, changes often affect multiple areas of the system. The impact of a change becomes difficult to predict because the architecture no longer provides clear boundaries between different responsibilities.
 
-Layers prevent this.
+Architectural layers prevent this.
 
-They group responsibility in a way that keeps related behavior together and unrelated behavior separate. This allows changes to remain contained and easier to reason about.
+They organize related responsibilities into well-defined areas while separating unrelated responsibilities. This allows change to remain localized, keeps the architecture understandable, and makes the system easier to evolve over time.
 
 This is not about organization for its own sake.
 
-It is about maintaining control over how the system evolves.
+It is about preserving clarity, maintaining architectural boundaries, and retaining control as the system grows.
 
 ---
 

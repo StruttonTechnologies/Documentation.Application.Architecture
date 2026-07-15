@@ -1,22 +1,22 @@
 # What Layers Are Not
 
-Layers are often misunderstood as physical structure.
+Architectural layers are often mistaken for physical structure.
 
 They are not folders. They are not projects. They are not namespaces.
 
-Those things can be used to represent layers, but they are not the layers themselves.
+Those physical structures can be used to implement layers, but they are not the layers themselves.
 
-A layer is a conceptual boundary that defines responsibility.
+A layer is a conceptual boundary that organizes a related set of responsibilities.
 
-This distinction matters.
+This distinction is important.
 
-If layers are treated as physical structure only, they lose their meaning. Code can be placed in the correct folder while still violating the intent of the architecture. The system may look organized, but the structure is weak.
+When layers are treated only as physical structure, they lose their architectural meaning. Code may be placed in the correct project or folder while still violating the responsibilities assigned to that layer. The system may appear organized, but its architecture has already begun to erode.
 
 Understanding layers as conceptual rather than physical prevents this.
 
-It shifts the focus from where code is located to why it exists in that location.
+It shifts the focus from where code is located to why it belongs there and what responsibility it is intended to fulfill.
 
-That is what gives layers their value.
+That is what gives architectural layers their value.
 
 ---
 

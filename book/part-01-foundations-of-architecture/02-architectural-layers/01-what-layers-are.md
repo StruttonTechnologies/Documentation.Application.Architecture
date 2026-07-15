@@ -1,20 +1,26 @@
 # What Layers Are
 
-Architectural layers are a way of organizing responsibility within a system.
+Architectural layers are a way of organizing responsibilities within a system.
 
-Each layer represents a distinct area of concern. Instead of allowing responsibilities to spread across the system, layers group related behavior into defined areas. This makes it easier to understand what belongs where and why it exists.
+Each layer represents a distinct area of responsibility. Rather than allowing responsibilities to spread throughout the system, layers group related responsibilities into clearly defined areas. This makes it easier to understand what belongs where and why it exists.
 
-A layer is not just a container for code. It defines what kind of responsibility is allowed to exist within it.
+A layer is more than a container for code.
 
-When layers are used correctly, you can look at a piece of logic and understand both what it does and where it belongs within the structure of the system.
+It defines the kinds of responsibilities that belong within it and establishes a clear separation from the responsibilities assigned to other layers.
+
+When layers are used correctly, you can look at a piece of functionality and understand not only what it does, but why it belongs in that particular layer.
 
 This is what gives architecture its clarity.
 
 Layers create a mental model.
 
-They allow you to reason about the system by separating concerns into predictable areas. Instead of thinking about the system as a collection of files or classes, you think about it in terms of responsibilities.
+They allow developers to reason about a system in terms of responsibilities rather than files, classes, or projects. This makes the structure of the system easier to understand, communicate, and maintain as it grows.
 
-This is the foundation for maintaining structure as the system grows.
+Layers organize responsibilities.
+
+They do not define the responsibilities themselves.
+
+That distinction is fundamental to understanding software architecture.
 
 ---
 

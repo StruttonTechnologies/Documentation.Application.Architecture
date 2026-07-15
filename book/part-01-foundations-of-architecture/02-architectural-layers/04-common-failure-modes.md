@@ -1,24 +1,24 @@
 # Common Failure Modes
 
-Layers are often defined but not enforced.
+Architectural layers are often defined but not enforced.
 
-One of the most common failure patterns is treating layers as suggestions instead of rules. The structure exists, but it is not respected. Code crosses boundaries because it is convenient. Dependencies are introduced without considering their impact on the overall system.
+One of the most common failure patterns is treating layers as guidelines rather than architectural rules. The structure exists, but it is not protected. Responsibilities gradually cross layer boundaries because it is convenient, and dependencies are introduced without considering their impact on the overall architecture.
 
-Over time, this erodes the architecture.
+Over time, the architecture begins to erode.
 
-Another common issue is creating layers without clear responsibility.
+Another common failure is creating layers without clearly defined responsibilities.
 
-If it is not obvious what belongs in a layer, developers will make their own decisions. This leads to inconsistency and confusion. The layer exists in name, but not in practice.
+When it is not obvious what belongs within a layer, developers are forced to make their own decisions. The result is inconsistency. The layer continues to exist in the solution, but no longer serves a meaningful architectural purpose.
 
-There is also a tendency to create shared areas that do not have a clear purpose.
+There is also a tendency to create shared areas without a clearly defined responsibility.
 
-These areas become dumping grounds for logic that does not seem to fit anywhere else. Instead of solving the problem, they hide it.
+These areas often become dumping grounds for functionality that does not appear to belong anywhere else. Rather than solving the underlying problem, they conceal it while allowing responsibilities to continue spreading throughout the system.
 
-All of these issues lead to the same result.
+All of these issues lead to the same outcome.
 
-The structure becomes harder to understand and harder to maintain.
+Architectural responsibilities become blurred. Dependencies become increasingly difficult to understand. Changes become harder to predict, and confidence in the architecture gradually declines.
 
-Layers only provide value when they are clearly defined and consistently enforced.
+Architectural layers only provide value when their responsibilities are clearly defined, their boundaries are respected, and the architecture consistently enforces their intended purpose.
 
 ---
 
