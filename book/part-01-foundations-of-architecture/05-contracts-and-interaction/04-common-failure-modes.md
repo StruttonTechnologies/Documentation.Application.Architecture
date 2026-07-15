@@ -20,4 +20,4 @@ Contracts only provide value when they are clearly defined and consistently enfo
 
 ---
 
-[← Back](04-why-contracts-matter.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../06-boundary-space/README.md)
+[← Back](03-why-contracts-matter.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../06-boundary-space/README.md)
