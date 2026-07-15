@@ -22,4 +22,4 @@ They contain it.
 
 ---
 
-[← Back](03-internal-vs-external-contracts.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](04-common-failure-modes.md)
+[← Back](02-contracts-vs-implementation.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](04-common-failure-modes.md)
