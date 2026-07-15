@@ -1,21 +1,23 @@
 # Commit and Transaction Boundaries
 
-Transactions are controlled through defined boundaries.
+The architecture explicitly defines where transaction boundaries exist.
 
-Data operations may occur in multiple steps, but changes are not finalized until a commit occurs. This ensures that the system maintains consistency.
+Persistence operations may occur throughout the execution of a request or workflow, but changes are committed only at the architectural unit responsible for completing that work. This preserves consistency while ensuring that transaction ownership remains explicit.
 
-The architecture defines where commits are allowed.
+For requests coordinated entirely by the Coordinator, the Coordinator owns the transaction boundary.
 
-In simple cases, a single transaction is handled directly by the Coordinator. Data is modified through repository contracts, and the changes are committed as a single operation.
+For workflows coordinated by Orchestration, Orchestration owns the transaction boundary.
 
-In more complex cases, Orchestration coordinates multiple steps.
+This distinction is intentional.
 
-It ensures that all required operations are completed before committing the final result. This allows the system to manage more complex workflows while maintaining consistency.
+The architectural unit responsible for coordinating the work is also responsible for determining when that work has been completed successfully and when persistence should be committed.
 
-Commit operations are not scattered throughout the system.
+Commit operations are therefore never scattered throughout the architecture.
 
-They are controlled and intentional, ensuring that data integrity is maintained.
+They occur only at well-defined architectural boundaries, preserving consistency, maintaining data integrity, and reinforcing the ownership of architectural responsibilities.
 
 ---
 
-[← Back](02-persistence-abstraction.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](04-how-it-fits-together.md)
+[← Persistence Abstraction](02-persistence-abstraction.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[How It Fits Together →](04-how-it-fits-together.md)

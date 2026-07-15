@@ -1,21 +1,19 @@
-# Common Failure Modes
+# Common Architectural Mistakes
 
-Data access is often implemented without proper abstraction.
+Persistence responsibilities are often placed in the wrong architectural units.
 
-One common issue is allowing direct access to the persistence layer. This bypasses repository contracts and exposes implementation details to the rest of the system.
+One common mistake is allowing the Application layer to access persistence implementations directly. Doing so bypasses repository contracts, weakens architectural boundaries, and exposes implementation details that should remain hidden.
 
-Another failure mode is scattering commit operations.
+Another mistake is scattering transaction ownership throughout the application. When multiple architectural units determine when persistence is committed, transaction boundaries become difficult to understand and architectural ownership becomes unclear.
 
-When commits occur in multiple places, it becomes difficult to understand when changes are finalized. This can lead to inconsistent data and unintended side effects.
+A third mistake is allowing persistence responsibilities to become mixed with business execution responsibilities. When business execution begins managing persistence details, the separation between execution and persistence gradually disappears.
 
-There is also a tendency to mix persistence logic with execution logic.
+Each of these decisions weakens the architecture by blurring responsibilities and reducing the effectiveness of its architectural boundaries.
 
-When data access is embedded directly within application logic, it becomes harder to maintain and understand the system.
-
-All of these issues weaken the architecture.
-
-Repository contracts and controlled persistence only provide value when they are consistently applied.
+Repository contracts and persistence abstractions provide value only when persistence remains the responsibility of the architectural units designed to own it.
 
 ---
 
-[← Back](04-how-it-fits-together.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../07-transaction-model/README.md)
+[← How It Fits Together](04-how-it-fits-together.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Transaction Model →](../07-transaction-model/README.md)

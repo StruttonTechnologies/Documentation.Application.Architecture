@@ -1,25 +1,23 @@
 # How It Fits Together
 
-Repository contracts and persistence abstraction work together to control data access.
+Repository contracts, persistence abstraction, and transaction boundaries work together to preserve the architectural separation between business execution and persistence.
 
-The Coordinator or Orchestration layer interacts with repository contracts to perform data operations. These operations are executed by the persistence layer, which remains hidden behind the contracts.
+The Application layer interacts only with repository contracts.
 
-Changes are not finalized until a commit occurs.
+Those contracts define the persistence operations available to the architecture while keeping persistence implementations hidden behind the architectural boundary.
 
-This ensures that the system maintains consistency and that operations are performed within defined transaction boundaries.
+Persistence implementations fulfill those operations without exposing their internal details to the rest of the application.
 
-The flow remains consistent with the overall architecture.
+Transaction ownership follows the same architectural responsibilities established throughout the system.
 
-- Requests enter through contracts  
-- Execution occurs within the Application layer  
-- Data access is performed through repository contracts  
-- Persistence is handled by the Infrastructure layer  
-- Changes are committed in a controlled manner  
+When the Coordinator owns the execution of a request, it owns the transaction boundary.
 
-Each step follows the architectural rules.
+When Orchestration owns the execution of a workflow, it owns the transaction boundary.
 
-This keeps the system predictable and easier to maintain.
+Together, these responsibilities ensure that persistence remains isolated from business execution while allowing data operations to occur in a controlled, predictable, and maintainable manner.
 
 ---
 
-[← Back](03-commit-and-transaction-boundaries.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](05-common-failure-modes.md)
+[← Commit and Transaction Boundaries](03-commit-and-transaction-boundaries.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Common Architectural Mistakes →](05-common-failure-modes.md)
