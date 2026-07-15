@@ -1,4 +1,4 @@
-# Chapter 6 — Boundary Space
+# Chapter 6 — Boundary Space   *(ToDo - Entire chapter needs to be rewritten)
 
 In the previous chapters, layers were introduced to organize responsibility, boundaries were introduced to separate that responsibility, direction was introduced to control how dependencies flow, and contracts were introduced to define how interaction is allowed.
 
