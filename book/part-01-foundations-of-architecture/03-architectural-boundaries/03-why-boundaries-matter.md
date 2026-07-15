@@ -1,26 +1,26 @@
 # Why Boundaries Matter
 
-Without boundaries, separation breaks down.
+Without architectural boundaries, separation gradually breaks down.
 
-At first, the system may still appear organized. Layers exist, and responsibilities are grouped. But without boundaries, there is nothing preventing code from crossing between those groups.
+At first, the system may still appear well organized. Layers exist, and responsibilities have been assigned. But without architectural boundaries, nothing prevents responsibilities from gradually spreading across those layers.
 
 Over time, interactions become uncontrolled.
 
-Logic from one area begins to depend directly on another. Responsibilities that were once separate start to overlap. Changes in one part of the system begin to affect other parts in ways that are difficult to predict.
+Dependencies begin to form directly between areas that should remain independent. Responsibilities that were once clearly separated start to blur, and changes in one part of the system begin to affect other parts in ways that are difficult to predict.
 
 This leads to tight coupling.
 
-Tightly coupled systems are harder to understand and harder to change. A modification in one area may require changes in multiple others, even when those areas are not directly related in purpose.
+Tightly coupled systems are harder to understand, harder to maintain, and harder to evolve. A change in one area often requires changes in several others, even when those areas serve entirely different responsibilities.
 
-Boundaries prevent this.
+Architectural boundaries prevent this.
 
-They restrict how parts of the system interact, ensuring that dependencies are introduced intentionally. They maintain the separation between responsibilities so that each part of the system can evolve independently.
+They control how different parts of the system interact, ensuring that dependencies are introduced intentionally and responsibilities remain contained within their intended areas.
 
 This is not about limiting flexibility.
 
-It is about preserving clarity and control.
+It is about preserving clarity, maintaining architectural integrity, and retaining control as the system evolves.
 
-Boundaries allow a system to grow without losing its structure.
+Architectural boundaries allow software systems to grow without gradually losing their structure.
 
 ---
 

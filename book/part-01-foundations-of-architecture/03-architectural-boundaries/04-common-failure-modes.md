@@ -1,22 +1,22 @@
 # Common Failure Modes
 
-Boundaries are often defined but not enforced.
+Architectural boundaries are often defined but not consistently enforced.
 
-One common issue is allowing code to cross boundaries without restriction. This may happen because it is faster or because the boundary is not clearly understood. Over time, this leads to tightly coupled components and a breakdown of separation.
+One of the most common failure patterns is allowing responsibilities to cross architectural boundaries without careful consideration. This often begins as a convenient shortcut or because the purpose of the boundary is not fully understood. Over time, these interactions accumulate, creating tightly coupled areas of the system and gradually weakening the architecture.
 
-Another failure mode is unclear boundaries.
+Another common failure is defining boundaries without clearly defining the responsibilities they protect.
 
-If it is not obvious where one responsibility ends and another begins, developers will make their own assumptions. This results in inconsistent behavior and confusion about where logic should be placed.
+When it is not obvious where one responsibility ends and another begins, developers are forced to make their own decisions. The result is inconsistent behavior, unclear ownership, and growing uncertainty about where new functionality belongs.
 
 There is also a tendency to weaken boundaries for convenience.
 
-Shortcuts are taken to avoid creating proper interaction points. These shortcuts accumulate, gradually eroding the structure of the system.
+Instead of establishing appropriate interaction points, shortcuts are introduced to bypass the intended architectural structure. While each shortcut may appear harmless, together they gradually erode the integrity of the architecture.
 
 All of these issues lead to the same outcome.
 
-The architecture becomes harder to understand and harder to maintain.
+Responsibilities become blurred. Dependencies become increasingly difficult to understand. Changes become harder to predict, and confidence in the architecture gradually declines.
 
-Boundaries only provide value when they are clearly defined and consistently respected.
+Architectural boundaries only provide value when they are clearly defined, consistently respected, and supported by the structure of the system.
 
 ---
 

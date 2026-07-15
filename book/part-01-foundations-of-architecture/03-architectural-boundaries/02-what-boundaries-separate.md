@@ -1,24 +1,24 @@
 # What Boundaries Separate
 
-Boundaries separate areas of responsibility within a system.
+Architectural boundaries separate areas of responsibility within a system.
 
-Each boundary represents a division between two distinct concerns. These concerns may exist at different levels of the system, but the principle remains the same. What exists on one side of the boundary should not freely mix with what exists on the other.
+Each boundary represents a division between two distinct responsibilities. Those responsibilities may exist at different levels of the architecture, but the principle remains the same. What belongs on one side of a boundary should not freely mix with what belongs on the other.
 
-This separation is not arbitrary.
+This separation is intentional.
 
 It reflects differences in responsibility.
 
-For example, one area of a system may be responsible for handling input, while another is responsible for business logic. These responsibilities should remain distinct because they serve different purposes and change for different reasons.
+For example, one area of a system may be responsible for receiving requests, while another is responsible for executing business behavior. These responsibilities should remain distinct because they serve different purposes and change for different reasons.
 
-Boundaries enforce that separation.
+Architectural boundaries preserve that separation.
 
-They ensure that logic tied to one responsibility does not become entangled with another. This makes the system easier to understand because each part has a clear role.
+They ensure that responsibilities remain contained within their intended area and do not gradually become intertwined with other parts of the system. This makes the architecture easier to understand because every area has a clear and well-defined purpose.
 
 It also makes the system easier to change.
 
-When responsibilities are separated by boundaries, changes can be made within one area without unintended effects in another.
+When responsibilities are separated by architectural boundaries, changes can usually be made within one area without producing unintended effects elsewhere in the system.
 
-This is how boundaries contribute to maintaining structure over time.
+This is how architectural boundaries preserve clarity, maintain structure, and support the long-term evolution of the system.
 
 ---
 
