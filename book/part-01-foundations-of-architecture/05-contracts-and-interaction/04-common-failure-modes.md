@@ -1,22 +1,22 @@
 # Common Failure Modes
 
-Contracts are often defined but not respected.
+Architectural contracts are often defined but not consistently respected.
 
-One common issue is exposing implementation details through contracts. This happens when internal structures or behaviors are made accessible, allowing other parts of the system to depend on them directly.
+One of the most common failure patterns is exposing implementation details through a contract. When internal structures or behavior become part of the interaction surface, other responsibilities begin depending on implementation rather than on the architectural agreement itself.
 
-Another failure mode is bypassing contracts entirely.
+Another common failure is bypassing architectural contracts entirely.
 
-Components may interact directly with internal logic instead of using the defined contract. This weakens the architecture and introduces hidden dependencies.
+Instead of interacting through the defined contract, responsibilities communicate directly with internal implementation. While this may appear simpler in the short term, it weakens architectural boundaries, introduces hidden dependencies, and gradually erodes the structure of the system.
 
-There is also a tendency to blur the line between internal and external contracts.
+There is also a tendency to blur the distinction between internal and external contracts.
 
-When these are not clearly distinguished, the system may leak internal structure or become tightly coupled to external requirements.
+When these different kinds of contracts are not clearly separated, internal architectural concerns begin leaking outward, while external requirements begin shaping internal implementation. This weakens the independence of both.
 
-Over time, these issues lead to the same outcome.
+All of these issues lead to the same outcome.
 
-The system becomes harder to understand, harder to change, and more fragile.
+Architectural responsibilities become increasingly difficult to separate. Dependencies become harder to understand. Changes become less predictable, and confidence in the architecture gradually declines.
 
-Contracts only provide value when they are clearly defined and consistently enforced.
+Architectural contracts only provide value when they are clearly defined, consistently respected, and supported by an architecture that prevents interaction outside those agreements.
 
 ---
 

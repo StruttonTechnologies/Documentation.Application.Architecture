@@ -1,24 +1,24 @@
 # Why Contracts Matter
 
-Without contracts, interaction becomes uncontrolled.
+Without architectural contracts, interaction gradually becomes uncontrolled.
 
-At first, components may interact directly for convenience. Methods are called, data structures are shared, and dependencies are introduced without much consideration.
+At first, responsibilities may interact directly because it appears more convenient. Internal methods are called, implementation details are exposed, and dependencies are introduced without considering their long-term architectural impact.
 
-Over time, this leads to tight coupling.
+Over time, these interactions create tight coupling.
 
-Parts of the system begin to rely on internal details of other parts. Changes in one area require changes in others. The system becomes harder to modify because interactions are no longer clearly defined.
+Responsibilities begin depending on the internal implementation of other responsibilities rather than on clearly defined architectural agreements. Changes in one area require changes in another because interaction is no longer governed by stable contracts.
 
-Contracts prevent this.
+Architectural contracts prevent this.
 
-They define a clear and consistent way for parts of the system to interact. They ensure that only the intended surface is exposed and that internal details remain hidden.
+They define a clear, intentional, and consistent way for responsibilities to interact. They expose only the approved surface of interaction while keeping implementation details hidden behind the contract.
 
-This makes the system more predictable.
+This makes the architecture more predictable.
 
-When interaction is controlled, it is easier to understand how components relate to each other and how changes will affect the system.
+When interaction is governed through contracts, it becomes easier to understand how responsibilities relate to one another and easier to predict the impact of change throughout the system.
 
-Contracts do not eliminate complexity.
+Architectural contracts do not eliminate complexity.
 
-They contain it.
+They contain it by preventing implementation details from spreading beyond the responsibilities that own them.
 
 ---
 

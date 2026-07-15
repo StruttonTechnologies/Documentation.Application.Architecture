@@ -2,21 +2,27 @@
 
 A contract is not an implementation.
 
-This distinction is critical.
+This distinction is fundamental to software architecture.
 
-Implementation defines how something works. It contains the logic, behavior, and internal details of a system. Contracts define how something can be used.
+A contract defines what interaction is permitted.
+
+An implementation defines how that interaction is fulfilled.
+
+Implementation contains the behavior, logic, algorithms, and internal details required to perform work. A contract exposes only the interaction that other parts of the system are allowed to depend upon.
 
 Confusing these two leads to architectural problems.
 
-When implementation details are exposed as part of the interaction surface, other parts of the system begin to depend on those details. This creates tight coupling and makes the system harder to change.
+When implementation details become part of the interaction surface, other responsibilities begin depending on those internal details rather than on the architectural agreement. This creates tight coupling and makes the architecture increasingly difficult to evolve.
 
-A well-defined contract hides implementation.
+A well-defined contract hides its implementation.
 
-It exposes only what is necessary for interaction while keeping internal details contained. This allows the implementation to evolve without affecting other parts of the system.
+It exposes only what is necessary for interaction while keeping internal behavior contained behind the contract. This allows the implementation to change without affecting the responsibilities that depend upon it.
 
 This separation is what allows architecture to remain stable over time.
 
-Contracts provide a stable way to interact, while implementation can change behind that interaction without breaking the system.
+Contracts provide a stable agreement for interaction.
+
+Implementations remain free to evolve as long as they continue to honor that agreement.
 
 ---
 
