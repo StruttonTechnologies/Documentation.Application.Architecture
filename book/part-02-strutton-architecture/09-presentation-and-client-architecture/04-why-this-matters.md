@@ -26,4 +26,4 @@ Each architectural unit remains responsible for the behavior it owns, allowing t
 
 [← Supporting Multiple User Experiences](03-supporting-multiple-user-experiences.md) |
 [Table of Contents](../../04-table-of-contents.md) |
-[Architectural Enforcement →](10-architectural-enforcement/README.md)
+[Architectural Enforcement →](../10-architectural-enforcement/README.md)
