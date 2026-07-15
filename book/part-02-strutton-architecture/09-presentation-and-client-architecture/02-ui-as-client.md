@@ -1,19 +1,23 @@
 # UI as a Client
 
-User interfaces are clients of the system.
+User interfaces are one type of client of the architecture.
 
-They are responsible for collecting input from users and displaying results, but they do not contain application behavior. Instead, they communicate with the system through the API.
+Their responsibility is to collect interaction from users and present the results returned by the application. They do not own business behavior. Instead, they consume that behavior through the API, which serves as the architectural boundary of the system.
 
-This keeps responsibilities clear.
+This separation preserves architectural responsibilities.
 
-The system owns behavior. The user interface owns presentation.
+The application owns business behavior.
 
-By separating these concerns, the architecture prevents business logic from being duplicated across different user experiences. The same system can support multiple interfaces without reimplementing core functionality.
+The user interface owns presentation and user experience.
 
-This also simplifies development.
+Because those responsibilities remain separate, multiple client applications can provide entirely different user experiences while relying on the same underlying business behavior. Business logic is implemented once within the architecture rather than duplicated across individual clients.
 
-User interfaces can focus on experience and interaction, while the system remains focused on execution and behavior.
+This separation also simplifies development.
+
+Each architectural unit remains focused on the responsibility it owns, allowing client applications to evolve independently without affecting business execution.
 
 ---
 
-[← Back](01-api-as-system-boundary.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](03-supporting-multiple-user-experiences.md)
+[← API as the System Boundary](01-api-as-system-boundary.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Supporting Multiple User Experiences →](03-supporting-multiple-user-experiences.md)

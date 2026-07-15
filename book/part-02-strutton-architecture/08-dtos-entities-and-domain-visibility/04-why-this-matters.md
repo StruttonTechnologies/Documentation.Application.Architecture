@@ -1,19 +1,21 @@
 # Why This Matters
 
-Without separation between DTOs and entities, concerns begin to mix.
+Without separating interaction models from domain models, architectural responsibilities begin to blur.
 
-External data structures may start to influence domain logic. Changes to input or output formats can impact core behavior. Over time, this leads to tightly coupled systems that are difficult to maintain.
+External representations gradually influence the internal business model. Changes made to satisfy user interfaces, APIs, or external integrations begin to reshape the concepts that define the domain. Over time, this produces tightly coupled systems that become increasingly difficult to understand, maintain, and evolve.
 
-Separating DTOs and entities prevents this.
+Maintaining separate representations prevents this.
 
-It allows the system to evolve independently in terms of interaction and execution. Changes to how data is received or returned do not affect how the system behaves internally.
+Interaction models are free to evolve as external requirements change, while domain models remain focused on representing business concepts and behaviors. Each representation serves the architectural responsibility for which it was designed.
 
-This improves flexibility.
+This separation preserves architectural boundaries.
 
-It also improves clarity.
+It protects the integrity of the domain.
 
-Each part of the system operates within its intended responsibility.
+It also allows every architectural unit to remain focused on its own responsibility without being influenced by concerns that belong elsewhere.
 
 ---
 
-[← Back](03-domain-visibility-rules.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](05-common-failure-modes.md)
+[← Domain Visibility Rules](03-domain-visibility-rules.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Common Architectural Mistakes →](05-common-architectural-mistakes.md)

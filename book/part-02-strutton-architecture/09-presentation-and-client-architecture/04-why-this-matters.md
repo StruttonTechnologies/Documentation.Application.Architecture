@@ -1,23 +1,29 @@
 # Why This Matters
 
-Without a clear separation between the system and its user interfaces, behavior tends to spread.
+Without a clear separation between the architecture and its clients, business behavior gradually spreads beyond the architectural boundaries intended to contain it.
 
-Logic may be duplicated across different applications. Changes must be made in multiple places. Over time, the system becomes inconsistent and harder to maintain.
+Business logic becomes duplicated across multiple clients. Changes must be implemented in several places. Over time, different clients begin to behave differently, and the architecture loses its consistency.
 
-Separating the API from the user interface prevents this.
+Separating the API from its clients prevents this.
 
-It ensures that behavior exists in a single location and that all clients interact with that behavior in a consistent way.
+The architecture owns business behavior.
 
-This improves maintainability.
+Clients consume that behavior.
+
+This allows every client to interact with the same application capabilities while remaining free to provide its own user experience.
+
+This separation improves maintainability.
 
 It also improves flexibility.
 
-New user experiences can be introduced without affecting the core system, and existing interfaces can evolve independently.
+New clients can be introduced, existing clients can evolve independently, and the architecture continues to expose the same business behavior through a single architectural boundary.
 
-This separation reinforces the overall architecture.
+Ultimately, this reinforces the central principle of the architecture.
 
-The system remains focused on execution, while user interfaces remain focused on presentation.
+Each architectural unit remains responsible for the behavior it owns, allowing the system to evolve without responsibilities becoming blurred across architectural boundaries.
 
 ---
 
-[← Back](03-supporting-multiple-user-experiences.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../10-architectural-enforcement/README.md)
+[← Supporting Multiple User Experiences](03-supporting-multiple-user-experiences.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Common Architectural Mistakes →](05-common-architectural-mistakes.md)

@@ -16,4 +16,4 @@ Repository contracts and persistence abstractions provide value only when persis
 
 [← How It Fits Together](04-how-it-fits-together.md) |
 [Table of Contents](../../04-table-of-contents.md) |
-[Transaction Model →](../07-transaction-model/README.md)
+[Transaction Model →](../08-dtos-entities-and-domain-visibility/README.md)

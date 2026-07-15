@@ -1,21 +1,25 @@
 # Long-Term Impact
 
-Enforced architecture leads to long-term stability.
+Architecture that protects itself remains understandable as it grows.
 
-As the system grows, new features are added within the existing structure rather than outside of it. This keeps the system consistent over time.
+As new features are introduced, they naturally fit within the existing architectural structure rather than creating new patterns or bypassing established responsibilities. Over time, the architecture becomes stronger instead of gradually eroding.
 
-Maintenance becomes easier.
+Development becomes more predictable.
 
-Because responsibilities are clear and boundaries are enforced, changes can be made with confidence. The impact of a change is easier to understand.
+Because responsibilities remain clearly defined and architectural boundaries continue to be enforced, developers can understand where new functionality belongs and make changes with confidence.
 
-The system remains adaptable.
+The architecture remains adaptable.
 
-New requirements can be introduced without restructuring the entire application. The architecture provides a stable foundation that supports change.
+New requirements, new technologies, and new clients can be introduced without redefining the fundamental structure of the system. The architecture provides a stable foundation that supports continuous evolution.
 
-This is the true value of enforcement.
+This is the true value of architectural enforcement.
 
-It is not about restricting developers. It is about preserving clarity, consistency, and maintainability as the system evolves.
+Its purpose is not to restrict developers.
+
+Its purpose is to preserve clarity, consistency, and ownership so the architecture continues to reflect its original design long after the original architects are gone.
 
 ---
 
-[← Back](03-what-this-prevents.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../99-part-02-summary/README.md)
+[← What This Prevents](03-what-this-prevents.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Part 2 Summary →](../99-part-02-summary/README.md)

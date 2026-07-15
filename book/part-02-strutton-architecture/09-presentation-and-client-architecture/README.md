@@ -1,22 +1,24 @@
-# Chapter 9 — Presentation and Client Architecture
+# Chapter 8 — Presentation and Client Architecture
 
-Up to this point, the focus has been on how the system is structured internally and how requests move through it.
+The previous chapters established how the architecture is constructed, how requests are executed, how persistence is isolated, and how architectural representations are protected.
 
-The next step is understanding how the system is exposed and consumed.
+The next architectural responsibility is exposing the system to its consumers.
 
-In this architecture, the Presentation layer is not tied to a specific user interface. The API exists as the boundary of the system, while user interfaces remain clients of that boundary.
+The architecture deliberately separates business execution from user experience. The API serves as the architectural boundary of the system, while user interfaces act as clients of that boundary rather than extensions of the application itself.
 
-This chapter explains how presentation and client interaction are intentionally separated from application behavior.
+This chapter explains how presentation and client architecture work together while preserving the same architectural boundaries established throughout the rest of the system.
 
 ## In this chapter, you will learn
 
-- how the API acts as the system boundary  
-- how user interfaces act as clients of the system  
-- how multiple user experiences can be supported without duplicating behavior  
-- why this separation improves flexibility and maintainability  
+- why the API serves as the architectural boundary
+- how user interfaces consume the architecture as clients
+- how multiple client applications can share the same business behavior
+- why separating presentation from execution improves flexibility and maintainability
 
-This chapter focuses on how the system is consumed, not how execution is performed internally.
+By the end of this chapter, you will understand how the architecture supports multiple user experiences without duplicating business behavior or weakening architectural boundaries.
 
 ---
 
-[← Back](../08-dtos-entities-and-domain-visibility/05-common-failure-modes.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](01-api-as-system-boundary.md)
+[← DTOs, Entities, and Domain Visibility](../07-dtos-entities-and-domain-visibility/05-common-architectural-mistakes.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[API as System Boundary →](01-api-as-system-boundary.md)

@@ -1,25 +1,23 @@
 # Domain Visibility Rules
 
-Domain concepts are not visible at the system boundary.
+The domain is intentionally hidden from external consumers.
 
-The Presentation layer does not have access to domain entities. It interacts only with DTOs and contracts.
+Architectural boundaries exist not only to separate responsibilities, but also to control visibility. The business concepts that define the domain remain internal to the architecture and are never exposed directly outside those boundaries.
 
-This enforces separation.
+The Presentation layer interacts only through DTOs and architectural contracts.
 
-By restricting visibility, the architecture prevents external concerns from depending on internal structures. It also prevents domain concepts from being shaped by external requirements.
+It has no knowledge of domain entities, business behavior, or persistence implementations. This allows external interaction to evolve without directly influencing the internal business model.
 
-The transition occurs within the Coordinator.
+This separation protects the domain.
 
-DTOs are mapped to entities, and from that point forward, execution operates on domain representations.
+Business concepts remain focused on solving business problems rather than adapting to communication formats, user interface requirements, or external integration concerns.
 
-This creates a clear boundary.
+The Coordinator serves as the architectural boundary where interaction transitions into business execution, but the purpose of that boundary is to preserve domain visibility rather than simply transform data.
 
-Before the Coordinator, interaction occurs through DTOs. After the Coordinator, execution occurs through entities.
-
-This rule is enforced by the structure of the system.
+The architecture enforces these visibility rules through its physical structure, making incorrect dependencies difficult to introduce rather than relying on developer discipline alone.
 
 ---
 
----
-
-[← Back](02-entities-and-execution.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](04-why-this-matters.md)
+[← Entities and Execution](02-entities-and-execution.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Why This Matters →](04-why-this-matters.md)

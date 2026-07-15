@@ -1,21 +1,19 @@
-# Common Failure Modes
+# Common Architectural Mistakes
 
-DTOs are often allowed to move beyond their intended boundary.
+Interaction and domain representations are often allowed to cross architectural boundaries.
 
-One common issue is using DTOs within execution logic. This mixes interaction concerns with domain behavior and weakens the separation between layers.
+One common mistake is allowing DTOs to move beyond the architectural boundary where they belong. When interaction models participate directly in business execution, the separation between interaction and execution gradually disappears.
 
-Another failure mode is exposing entities externally.
+Another mistake is exposing domain entities outside the architecture. When business representations become part of external contracts, the internal business model begins to evolve in response to external requirements rather than business requirements.
 
-When domain entities are used for communication, internal structures become coupled to external requirements. This makes the system harder to change.
+A third mistake is bypassing the architectural boundary between interaction and business execution. Whether that boundary is crossed through mapping or another transformation mechanism is an implementation detail. What matters architecturally is that the transition occurs at a well-defined boundary.
 
-There is also a tendency to bypass mapping.
+Each of these decisions weakens the architecture by allowing one representation to assume responsibilities intended for another.
 
-Skipping the transition between DTOs and entities may seem efficient, but it removes a critical boundary and allows concerns to mix.
-
-All of these issues reduce clarity.
-
-DTOs and entities only provide value when their roles are clearly defined and consistently enforced.
+Interaction models and domain models provide value only when each remains responsible for the architectural purpose for which it was designed.
 
 ---
 
-[← Back](04-why-this-matters.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../09-presentation-and-client-architecture/README.md)
+[← Why This Matters](04-why-this-matters.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Presentation and Client Architecture →](../08-presentation-and-client-architecture/README.md)

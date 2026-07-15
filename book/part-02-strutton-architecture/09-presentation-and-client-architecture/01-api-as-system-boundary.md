@@ -1,19 +1,23 @@
 # API as the System Boundary
 
-In this architecture, the API represents the boundary of the system.
+The API is the architectural boundary of the system.
 
-It is the point where requests enter and results leave. All external interaction passes through the API before reaching the application.
+Every request enters the architecture through the API, and every result leaves through the same boundary. No external consumer interacts directly with the application's internal architectural units.
 
-The API is not the user interface.
+The API is not a user interface.
 
-It exists as its own assembly and is responsible for handling communication with clients. Its role is to receive input, translate that input into requests the system can process, and return the results produced by the system.
+Its responsibility is to expose the capabilities of the application to external consumers while remaining separate from both presentation concerns and business execution.
 
-This separation is intentional.
+This distinction is intentional.
 
-By treating the API as the system boundary, the architecture ensures that all interaction follows a consistent path. It also prevents user interface concerns from becoming mixed with application behavior.
+By treating the API as the architectural boundary, the architecture ensures that every client interacts with the system through a single, consistent entry point. This protects the internal architecture from client-specific concerns while allowing multiple clients to consume the same application behavior.
 
-The API defines how the system is accessed, not how it behaves.
+The API defines how the architecture is accessed.
+
+It does not define how the business behaves.
 
 ---
 
-[← Back](README.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](02-ui-as-client.md)
+[← Chapter Overview](README.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Clients of the Architecture →](02-ui-as-client.md)

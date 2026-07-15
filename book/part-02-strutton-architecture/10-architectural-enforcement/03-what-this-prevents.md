@@ -1,27 +1,29 @@
 # What This Prevents
 
-By enforcing structure through the system, this architecture prevents common failure patterns.
+By enforcing its own structure, the architecture prevents many of the problems that naturally emerge as software systems grow.
 
-It prevents bypassing layers.
+## Architectural Boundary Violations
 
-Because implementation assemblies are not visible, developers cannot skip contracts and access functionality directly.
+Implementation assemblies are not visible outside the architectural units that own them. This prevents developers from bypassing contracts or introducing direct dependencies that violate the intended execution flow.
 
-It prevents tight coupling.
+## Tight Coupling
 
-Dependencies are controlled, and components can only interact through defined interfaces. This keeps the system modular and easier to change.
+Dependencies follow a controlled direction, allowing each architectural unit to interact only through the responsibilities intentionally exposed to it. This preserves modularity and allows individual parts of the system to evolve independently.
 
-It prevents mixed responsibilities.
+## Blurred Responsibilities
 
-Each part of the system has a clear role, and the architecture ensures that those roles are not violated.
+Each architectural unit owns a single responsibility. Because those responsibilities are protected by the structure of the architecture, business behavior, presentation, persistence, and interaction remain clearly separated.
 
-It prevents inconsistent patterns.
+## Inconsistent Architectural Patterns
 
-All interaction follows the same structure, making the system predictable and easier to understand.
+Every request follows the same architectural path from client interaction through execution and persistence. This consistency makes the architecture easier to understand, maintain, and extend over time.
 
-These are not theoretical benefits.
+These are not theoretical advantages.
 
-They are practical outcomes of enforcing architectural rules.
+They are the practical result of designing an architecture that protects its own responsibilities instead of relying on developer discipline.
 
 ---
 
-[← Back](02-how-the-architecture-enforces-itself.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](04-long-term-impact.md)
+[← How the Architecture Enforces Itself](02-how-the-architecture-enforces-itself.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Long-Term Impact →](04-long-term-impact.md)

@@ -1,17 +1,23 @@
 # DTOs and Interaction
 
-DTOs are used for interaction.
+DTOs exist to support interaction with the outside world.
 
-They define the shape of data as it enters and exits the system. DTOs are designed for communication, not execution.
+They define the information exchanged between the architecture and its consumers while remaining independent of the domain model used for business execution.
 
-They represent external input and output.
+This distinction is intentional.
 
-This allows the system to control how data is received and returned without exposing internal structures.
+The architecture does not expose domain entities directly. Instead, it communicates through DTOs that are designed specifically for interaction. This allows the external representation of data to evolve independently of the internal business model.
 
-DTOs exist at the boundary of the system.
+Because DTOs exist only to support interaction, they remain at the architectural boundary.
 
-They are used in the Presentation layer and passed into the Application layer, where they are processed by the Coordinator.
+They enter the architecture through the Presentation layer and are prepared for execution within the Application layer before being transformed into domain entities.
 
-DTOs do not represent domain concepts.
+DTOs do not represent business concepts.
 
-They are shaped for interaction and may change based on how the system is used, without affecting the core behavior of the system.
+They represent the information required for interaction, allowing the architecture to protect its internal model while providing stable contracts to external consumers.
+
+---
+
+[← Chapter Overview](README.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Entities and Business Execution →](02-entities-and-execution.md)

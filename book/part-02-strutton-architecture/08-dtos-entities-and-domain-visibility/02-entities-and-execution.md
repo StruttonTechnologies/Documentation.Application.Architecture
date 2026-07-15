@@ -1,17 +1,21 @@
 # Entities and Execution
 
-Entities are used for execution.
+Entities exist to represent the business concepts of the domain.
 
-They represent domain concepts and are used within the system to perform operations. Entities carry meaning within the domain and define how the system behaves.
+Unlike DTOs, which are designed for interaction, entities are designed to support business execution. They model the concepts, relationships, and behaviors that define how the system operates.
 
-Entities are not exposed externally.
+This distinction is intentional.
 
-They are created within the Coordinator after mapping from DTOs and are used throughout execution.
+Business execution should operate on domain representations rather than interaction models. By separating these responsibilities, the architecture protects its internal business model from changes in external consumers or communication requirements.
 
-This separation is intentional.
+Entities remain within the architectural boundaries of the system.
 
-It ensures that execution logic operates on domain representations rather than data structures designed for interaction.
+They participate in business execution, persistence, and workflow coordination, but they are never exposed directly outside the architecture.
 
-Entities remain within the internal boundaries of the system.
+This separation preserves the integrity of the domain while allowing interaction models and business models to evolve independently.
 
-They are not used for communication with external clients.
+---
+
+[← DTOs and Interaction](01-dtos-and-interaction.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Domain Visibility →](03-domain-visibility.md)

@@ -1,29 +1,33 @@
 # How the Architecture Enforces Itself
 
-This architecture enforces its structure through visibility and dependency control.
+This architecture enforces its structure through visibility, dependency control, and physical separation.
 
-Each part of the system is only aware of what it is allowed to interact with.
+Rather than relying on developer discipline, the architecture limits what each architectural unit is capable of seeing and interacting with. Responsibilities are protected by the structure of the solution itself.
 
-The Presentation layer interacts with the system through contracts.
+This enforcement occurs in several ways.
 
-It does not have access to implementation assemblies. This prevents direct calls to execution logic and ensures that all requests follow the intended path.
+## Visibility Control
 
-The Application layer is divided into contracts and implementation.
+The Presentation layer interacts with the application only through architectural contracts. Implementation assemblies remain hidden, preventing direct access to execution logic and ensuring that every request follows the intended architectural path.
 
-Contracts define interaction. Implementation contains execution. This separation prevents external components from accessing internal behavior directly.
+## Dependency Control
 
-ApplicationComposition controls how the system is assembled.
+Dependencies flow in a single direction. Each architectural unit depends only on the responsibilities it is intended to consume, preventing incorrect relationships from forming over time.
 
-It is the only place where implementation assemblies are referenced directly. This allows the system to be composed without exposing those implementations elsewhere.
+## Physical Separation
 
-DTOs and entities are separated.
+ApplicationComposition is the only architectural unit responsible for assembling the system. Implementation assemblies remain isolated everywhere else, allowing the application to be constructed without exposing internal implementations throughout the solution.
 
-DTOs are used for interaction. Entities are used for execution. This prevents external data structures from influencing internal behavior.
+## Representation Separation
 
-These rules are enforced by the structure of the system.
+DTOs and domain entities remain separate representations with different responsibilities. Interaction models are never used for business execution, and domain models are never exposed outside the architecture.
 
-They do not rely on convention.
+These mechanisms work together to enforce the architecture.
+
+The result is a system where the correct architectural path is the easiest path, and incorrect dependencies are difficult or impossible to introduce.
 
 ---
 
-[← Back](01-why-enforcement-matters.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](03-what-this-prevents.md)
+[← Why Enforcement Matters](01-why-enforcement-matters.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[What This Prevents →](03-what-this-prevents.md)

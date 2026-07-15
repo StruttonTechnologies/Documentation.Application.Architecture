@@ -1,39 +1,43 @@
 # Part 2 — Summary
 
-This part applied the architectural concepts introduced earlier to a concrete system.
+This part transformed the architectural concepts introduced in Part 1 into a complete application architecture.
 
-The goal was not to introduce new ideas, but to show how those ideas become real when they are enforced through structure, visibility, and controlled interaction.
+Rather than presenting individual patterns or technologies, it demonstrated how architectural responsibilities can be organized into a cohesive system whose structure reinforces the design decisions behind it.
 
-Each chapter focused on a specific aspect of the system.
+Throughout this part, every major architectural responsibility was introduced independently.
 
-ApplicationComposition defined how the system is assembled while controlling visibility. Requests entered the system through Coordinator contracts, ensuring that execution could not be accessed directly. The Coordinator handled request execution at the entry point, while Orchestration was introduced only when multi-step workflows required coordination.
+Construction, request entry, request coordination, workflow coordination, persistence, data representation, system exposure, and architectural enforcement were each assigned a clear owner with well-defined responsibilities and protected architectural boundaries.
 
-Repository contracts and persistence abstraction ensured that data access remained controlled. The transaction model defined how changes are applied, distinguishing between simple and coordinated operations. DTOs and entities established a clear boundary between interaction and execution, while domain visibility rules ensured that internal concepts were not exposed externally.
+Together, these architectural units form a complete execution model.
 
-Presentation was separated from execution.
+More importantly, they demonstrate a broader architectural philosophy.
 
-The API acted as the boundary of the system, while user interfaces remained clients. This allowed multiple user experiences to exist without duplicating behavior or introducing inconsistency.
+- Every significant responsibility has a single owner.
+- Every architectural boundary exists to protect a responsibility.
+- The physical structure of the solution enforces those boundaries so that the correct architectural decision becomes the natural path rather than relying on developer discipline.
 
-All of these elements worked together to enforce the architecture.
+This is the defining characteristic of the Strutton Technologies Application Architecture.
 
-The system was designed so that incorrect usage is difficult or impossible. Developers are not required to remember the rules. The structure of the system ensures that those rules are followed.
+Its purpose is not simply to organize code.
 
-## What This Means
+Its purpose is to preserve clarity, consistency, and maintainability throughout the lifetime of the application, allowing systems to evolve without gradually losing their architectural integrity.
 
-The architecture is not defined by patterns alone.
+Now that each architectural responsibility has been examined individually, the architecture can be viewed as a complete system.
 
-It is defined by how those patterns are applied and enforced.
+![Architecture Diagram](../../../assets/diagrams/ArchitectureDiagram.png)
 
-This approach prioritizes clarity, consistency, and control. It ensures that the system remains understandable as it grows and that changes can be made without breaking its structure.
+The diagram above is no longer a collection of individual architectural units. It represents a cohesive execution model where every responsibility has a defined owner, every interaction follows a controlled path, and every architectural boundary exists to protect the long-term integrity of the system.
 
 ## What Comes Next
 
-The next volume focuses on implementation.
+Part 3 moves from architecture to implementation.
 
-It will walk through how to build a system using this architecture, including project structure, configuration, and practical development patterns.
+The architecture has now been defined.
 
-Where this part defined the model, the next part will show how to apply it.
+The next part demonstrates how that architecture is implemented in practice, including solution structure, project organization, dependency registration, and the development patterns used to build applications that remain consistent with the architectural principles established throughout this part.
 
 ---
 
-[← Back](../10-architectural-enforcement/04-long-term-impact.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../../README.md)
+[← Architectural Enforcement](../08-architectural-enforcement/04-long-term-impact.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Continue to Part 3 →](../../README.md)

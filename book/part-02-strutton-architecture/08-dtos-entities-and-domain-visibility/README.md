@@ -1,22 +1,24 @@
-# Chapter 8 — DTOs, Entities, and Domain Visibility
+# Chapter 7 — DTOs, Entities, and Domain Visibility
 
-In the previous chapters, the execution flow, orchestration, and transaction model were introduced.
+The previous chapters introduced how requests move through the architecture, how workflows are coordinated, and how persistence responsibilities are isolated behind architectural boundaries.
 
-The next step is understanding how data is represented and controlled within the system.
+Throughout those discussions, DTOs and entities have been referenced as different representations of data. This chapter examines those concepts in greater depth and explains why the architecture treats them as distinct responsibilities.
 
-Not all data serves the same purpose. Some data exists for interaction, while other data exists for execution. This distinction is critical for maintaining a clean architecture.
+Not all data serves the same purpose. Some representations exist to support interaction with the outside world, while others exist to support business execution within the application. Understanding that distinction is fundamental to maintaining clear architectural boundaries.
 
-This chapter explains how DTOs, entities, and domain visibility are handled in this architecture.
+This chapter explains how DTOs, entities, and domain visibility work together within the Strutton Technologies Application Architecture.
 
 ## In this chapter, you will learn
 
-- how DTOs are used for interaction  
-- how entities are used for execution  
-- how domain visibility is controlled  
-- why separating these concerns is essential  
+- the responsibility of DTOs within the architecture
+- the responsibility of domain entities
+- how domain visibility protects business execution
+- why interaction models and domain models remain separate
 
-This chapter focuses on how data moves through the system and how visibility rules enforce architectural boundaries.
+By the end of this chapter, you will understand how data representations change as requests move through the architecture and why those boundaries are essential to preserving architectural responsibilities.
 
 ---
 
-[← Back](../07-transaction-model/05-common-failure-modes.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](01-dtos-and-interaction.md)
+[← Repository and Persistence](../06-repository-and-persistence/05-common-architectural-mistakes.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[DTOs and Interaction →](01-dtos-and-interaction.md)
