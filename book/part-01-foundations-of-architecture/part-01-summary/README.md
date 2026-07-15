@@ -2,30 +2,32 @@
 
 This part introduced the foundational concepts of software architecture.
 
-The goal was not to provide a complete treatment of every topic, but to establish a clear and consistent way of thinking about structure, separation, interaction, and control.
+The goal was not to provide a comprehensive treatment of every architectural topic, but to establish a clear and consistent way of thinking about structure, responsibilities, interaction, and architectural control.
 
-Each chapter built on the previous one to form a cohesive model.
+Each chapter built upon the previous one to form a cohesive conceptual model.
 
-Architecture was defined as the structure of a system. That structure was then broken down into layers, which organize responsibility. Boundaries were introduced to separate those responsibilities. Dependency direction was used to control how those parts interact. Contracts defined how interaction is allowed to occur. Boundary space identified where interaction happens, and architectural units ensured that the structure is maintained over time.
+Software architecture was introduced as the structure of a system. Architectural layers were presented as the mechanism for organizing responsibilities. Architectural boundaries protect those responsibilities by defining where one ends and another begins. Dependency direction controls how responsibilities are allowed to interact, while architectural contracts define the agreements that govern that interaction.
 
-Taken together, these concepts form a complete foundation.
+Taken together, these concepts form a complete architectural foundation.
 
-They describe not just what architecture is, but how it behaves and how it is preserved as a system evolves.
+They describe not only what architecture is, but how it preserves clarity, controls interaction, and maintains its structure as a system grows and evolves.
 
 This foundation is intentionally conceptual.
 
-It avoids implementation details so that the ideas remain clear and transferable. The same principles apply regardless of language, framework, or platform.
+It avoids implementation details so that the principles remain applicable regardless of language, framework, platform, or technology. The concepts introduced here are intended to outlast individual tools and provide a stable way of thinking about software architecture.
 
 ## What Comes Next
 
-The next part of this book moves from concept to application.
+The next part moves from architectural concepts to architectural application.
 
-The architecture described so far will be applied to a concrete system. Each layer, boundary, and interaction point will be explored in detail, along with the assemblies and structures that make up the implementation.
+The principles introduced in this part will be applied to a complete application architecture. Readers will see how responsibilities become architectural layers, how boundaries are enforced through structure, how contracts regulate interaction, and how these concepts work together to create a cohesive, self-enforcing architecture.
 
 This is where the concepts become tangible.
 
-The goal is to show how a disciplined architectural model can be translated into a real system while maintaining the clarity and control established in this part.
+Rather than introducing new architectural ideas, the next part demonstrates how the foundational principles established here are applied to build software systems that remain clear, maintainable, and structurally consistent over time.
 
 ---
 
-[← Back](../07-architectural-units/04-common-failure-modes.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../../part-02-your-architecture/README.md)
+[← Back](../05-contracts-and-interaction/04-common-failure-modes.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Continue to Part 2 →](../../part-02-strutton-architecture/README.md)
