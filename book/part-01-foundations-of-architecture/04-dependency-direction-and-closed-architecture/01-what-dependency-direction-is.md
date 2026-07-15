@@ -1,18 +1,18 @@
 # What Dependency Direction Is
 
-Dependency direction defines how parts of a system are allowed to depend on each other.
+Dependency direction defines how responsibilities within a system are allowed to depend on one another.
 
-While layers group responsibility and boundaries separate it, direction determines how those layers are connected. It establishes a clear flow of dependency that prevents relationships from forming arbitrarily.
+Architectural layers organize responsibilities. Architectural boundaries protect those responsibilities. Dependency direction controls how those responsibilities are allowed to interact by defining the direction in which dependencies may flow.
 
-Without defined direction, dependencies form wherever they are convenient.
+Without defined dependency direction, relationships begin to form wherever they are convenient.
 
-One part of the system may depend on another, which in turn depends on something else, eventually creating chains that are difficult to follow. In some cases, these chains loop back on themselves, making the system even harder to reason about.
+One part of the system may depend on another, which in turn depends on something else, eventually creating dependency chains that are difficult to understand. In some cases, those dependencies form cycles, making the structure of the system increasingly difficult to reason about and maintain.
 
 Dependency direction prevents this.
 
-It defines a consistent path that dependencies must follow. Instead of allowing relationships to form freely, the architecture enforces a structure that keeps those relationships predictable.
+It establishes a consistent flow that dependencies must follow. Rather than allowing relationships to develop arbitrarily, the architecture defines clear rules that keep interactions predictable and preserve the intended structure of the system.
 
-This makes it easier to understand how the system is organized and how changes will propagate through it.
+This makes the architecture easier to understand because dependencies always move in a consistent direction. It also makes the impact of change easier to predict because the flow of interaction remains controlled.
 
 ---
 

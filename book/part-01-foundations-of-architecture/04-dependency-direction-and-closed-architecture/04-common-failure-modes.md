@@ -1,24 +1,22 @@
 # Common Failure Modes
 
-Dependency direction is often defined but not enforced.
+Dependency direction is often defined but not consistently enforced.
 
-One common issue is allowing dependencies to be introduced in any direction. This typically happens for convenience, when a shortcut seems easier than following the intended structure.
+One of the most common failure patterns is allowing dependencies to be introduced wherever they are convenient. What begins as a simple shortcut gradually becomes a network of relationships that no longer reflects the intended architecture.
 
-Over time, this leads to tangled dependencies.
+Another common failure is allowing architectural layers to be bypassed.
 
-Another failure mode is allowing layers to be bypassed.
+Responsibilities begin interacting directly with other responsibilities that were intentionally separated by intermediate layers. While these shortcuts may simplify an individual implementation, they weaken the architectural structure and gradually erode the integrity of the system.
 
-A component may depend directly on another layer that is not adjacent to it. While this may simplify a specific use case, it breaks the consistency of the architecture and introduces hidden coupling.
+There is also a tendency to relax dependency rules under pressure.
 
-There is also a tendency to relax direction rules under pressure.
-
-Deadlines or complexity may lead to decisions that violate the intended structure. These decisions accumulate, gradually eroding the architecture.
+Deadlines, complexity, or convenience can lead to decisions that violate the intended direction of interaction. Although each decision may appear harmless on its own, together they gradually weaken the architecture and make future changes more difficult.
 
 All of these issues lead to the same outcome.
 
-The system becomes harder to understand, harder to maintain, and more prone to unintended side effects.
+Dependency relationships become increasingly difficult to understand. Architectural boundaries lose their effectiveness. Responsibilities become blurred, changes become less predictable, and confidence in the architecture gradually declines.
 
-Dependency direction only provides value when it is clearly defined and consistently enforced.
+Dependency direction only provides value when it is clearly defined, consistently enforced, and supported by an architecture that prevents dependencies from forming in unintended ways.
 
 ---
 

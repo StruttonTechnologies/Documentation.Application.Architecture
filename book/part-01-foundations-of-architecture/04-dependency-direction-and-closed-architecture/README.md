@@ -1,22 +1,27 @@
 # Chapter 4 — Dependency Direction and Closed Architecture
 
-In the previous chapters, layers were introduced to organize responsibility, and boundaries were introduced to separate those responsibilities.
+In the previous chapters, architectural layers were introduced as a way of organizing responsibilities, and architectural boundaries were introduced as a way of protecting those responsibilities.
 
-The next step is understanding how those parts are allowed to interact.
+The next step is understanding how those responsibilities are allowed to interact.
 
-Architecture is not only about structure and separation. It is also about control. Without clear rules governing how different parts of the system depend on each other, structure breaks down over time.
+Architecture is not only about organization and separation. It is also about controlling the direction of interaction. Without clear rules governing dependencies, responsibilities gradually become interconnected, architectural boundaries weaken, and the structure of the system begins to erode.
 
-This chapter focuses on dependency direction and the concept of a closed architecture.
+This chapter introduces dependency direction and the concept of a closed architecture.
 
 ## In this chapter, you will learn
 
-- what dependency direction is and how it shapes system behavior  
-- why controlling dependency flow is necessary for maintaining structure  
-- what a closed architecture is and how it enforces consistency  
-- common ways dependency direction breaks down in real systems  
+- what dependency direction is
+- why controlling dependency flow preserves architectural structure
+- what a closed architecture is
+- how closed architectures enforce consistency
+- common misconceptions and failure patterns involving dependency direction
 
-This is not about specific technologies or frameworks. It is about understanding how controlled interaction preserves the integrity of the system.
+This chapter does not focus on specific technologies or frameworks.
+
+Instead, it establishes the principles that govern how responsibilities are allowed to interact while preserving the integrity of the architecture as the system evolves.
 
 ---
 
-[← Back](../03-architectural-boundaries/04-common-failure-modes.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](01-what-dependency-direction-is.md)
+[← Back](../03-architectural-boundaries/04-common-failure-modes.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[What Dependency Direction Is →](01-what-dependency-direction-is.md)
