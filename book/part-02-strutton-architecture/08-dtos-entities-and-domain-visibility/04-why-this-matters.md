@@ -18,4 +18,4 @@ It also allows every architectural unit to remain focused on its own responsibil
 
 [← Domain Visibility Rules](03-domain-visibility-rules.md) |
 [Table of Contents](../../04-table-of-contents.md) |
-[Common Architectural Mistakes →](05-common-architectural-mistakes.md)
+[Common Failure Modes →](05-common-failure-modes.md)
