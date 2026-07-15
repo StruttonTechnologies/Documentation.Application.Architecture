@@ -8,9 +8,9 @@ No part of this publication may be reproduced, distributed, or transmitted in an
 
 This book presents architectural concepts, patterns, and opinions intended for professional and educational use. It reflects the author's practical experience and design philosophy. It does not constitute legal, financial, regulatory, or contractual advice.
 
-The examples, diagrams, terminology, and organizational models presented in this book are provided to support understanding of software architecture. They are intended to clarify design principles and decision-making, not to prescribe a single universal solution for every system.
+The examples, diagrams, terminology, and organizational models presented throughout this book are intended to explain architectural reasoning and design decisions. They are not intended to prescribe a universal solution for every software system.
 
-**First edition.**
+**First Edition**
 
 ---
 

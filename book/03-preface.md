@@ -1,14 +1,18 @@
-Software architecture is often talked about as if it lives somewhere above the day-to-day work of building software. In practice, it’s the opposite. Architecture shows up in the code we write, the way teams collaborate, how systems evolve, and how easy or difficult it is to understand what a system is actually doing.
+# Preface
 
-This book was written to give software engineers, technical leads, and architects a practical way to think about architecture without reducing it to slogans or diagrams that look good but do not hold up in real systems. The goal is not to present architecture as theory. It is to treat it as a discipline. One that helps keep responsibilities clear and change manageable.
+When I first began working with modern application architectures, I quickly discovered that learning an architecture and understanding an architecture were two very different things.
 
-The approach in this book is intentionally pragmatic. It focuses on boundaries, controlled dependency direction, explicit contracts, layered responsibilities, and the discipline required to maintain them over time. It also assumes something important. Good architecture is not measured by how novel it is. It is measured by how clear it is, how maintainable it remains, and how well it supports a system as it grows.
+Like many software engineers, I inherited an existing system that had grown over many years. Later, I was introduced to a modern architectural approach that was significantly more structured and maintainable. The implementation was impressive, but I soon realized that understanding the project structure was the easy part. Understanding *why* it was structured that way was much harder.
 
-This first book is focused entirely on architecture. It explains the conceptual model, the purpose of each layer, the role of contracts and DTOs, and the architectural elements that tie everything together. It deliberately stays light on implementation details. Those belong in a separate volume, where engineering decisions, project structure, and code-level patterns can be covered properly.
+I found myself trying to learn architectural patterns, clean code concepts, dependency management, and unfamiliar terminology simultaneously. Different books and authors often used the same words to describe different ideas, while different architectures sometimes used different words for similar concepts. More importantly, many resources presented a completed architecture without first establishing the concepts needed to understand it.
 
-If you are new to architecture, this book is meant to get you oriented quickly. If you already have experience, it is designed to give you a consistent way to reason about systems and the trade-offs behind them.
+That experience became the motivation for this book.
 
-My goal is simple. Make architecture easier to understand, easier to teach, and easier to apply with discipline.
+This book does not attempt to teach every aspect of software architecture. Entire libraries have already been written on that subject, and deservedly so. Instead, it introduces the architectural principles and vocabulary necessary to understand the application architecture presented throughout the remainder of the book.
+
+The architecture itself was designed with the same philosophy. Responsibilities are intentionally named. Architectural units have a single purpose. Dependencies are physically constrained rather than managed through convention. The goal is to make the structure of the solution communicate its architecture as clearly as possible.
+
+My hope is that readers never find themselves in the same position I did—trying to understand an implementation before understanding the principles that make it work.
 
 — Shawn Strutton  
 Strutton Technologies

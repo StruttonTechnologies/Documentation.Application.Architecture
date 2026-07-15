@@ -10,9 +10,9 @@
 
 ---
 
-This book introduces a practical software architecture designed to improve clarity, maintainability, and long-term system health. It focuses on architectural thinking, responsibility boundaries, dependency direction, and the role of layers in building software that can evolve without collapsing into chaos.
+This book presents the application architecture developed by Strutton Technologies. It introduces the architectural principles required to understand the architecture before exploring its structure, reasoning, and practical application.
 
-This volume is intentionally focused on architecture. It explains what the architecture is, why it exists, and how its parts relate at a high level. It does not attempt to teach implementation details. A separate volume will cover engineering and implementation.
+This volume focuses on architectural thinking rather than implementation details. Engineering practices, project organization, and framework-specific implementation are intentionally reserved for a companion engineering volume.
 
 ---
 
