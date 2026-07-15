@@ -20,4 +20,4 @@ Architectural contracts only provide value when they are clearly defined, consis
 
 ---
 
-[← Back](03-why-contracts-matter.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../06-boundary-space/README.md)
+[← Back](03-why-contracts-matter.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../part-01-summary/README.md)
