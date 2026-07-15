@@ -40,4 +40,4 @@ The next part demonstrates how that architecture is implemented in practice, inc
 
 [← Architectural Enforcement](../08-architectural-enforcement/04-long-term-impact.md) |
 [Table of Contents](../../04-table-of-contents.md) |
-[Continue to Part 3 →](../../README.md)
+[Continue to Part 3 →](../../part-03-architectural-application-styles/README.md)
