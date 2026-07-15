@@ -55,4 +55,4 @@ The goal is not to redefine software architecture, but to establish a common lan
 
 ---
 
-[← Back](04-table-of-contents.md) | [Table of Contents](04-table-of-contents.md) | [Next →](Part-01-Foundations/README.md)
+[← Back](04-table-of-contents.md) | [Table of Contents](04-table-of-contents.md) | [Next →](part-01-foundations-of-architecture/README.md)
