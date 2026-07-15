@@ -22,4 +22,4 @@ Architecture is about structure. Tools are just implementation details.
 
 ---
 
-[← Back](04-why-architecture-matters.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../02-architectural-thinking/README.md)
+[← Back](04-why-architecture-matters.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../02-architectural-layers/README.md)
