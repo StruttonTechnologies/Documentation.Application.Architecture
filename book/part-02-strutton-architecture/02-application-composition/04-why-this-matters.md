@@ -1,21 +1,23 @@
 # Why This Matters
 
-Without controlled composition, architectural boundaries are easy to bypass.
+Without controlled composition, architectural boundaries become easy to bypass.
 
-In many systems, the application entry point references all implementation assemblies directly. This makes it possible for any part of the system to access any other part.
+In many applications, the application entry point references implementation assemblies directly. As additional assemblies are introduced, the entry point gradually becomes aware of more and more of the system's internal structure.
 
-While this may seem convenient, it weakens the architecture.
+While this approach may appear convenient, it weakens the architecture.
 
-Developers can introduce dependencies that skip layers, bypass contracts, or access implementation details directly. Over time, this leads to tightly coupled systems and a breakdown of structure.
+Developers can unintentionally introduce dependencies that skip architectural boundaries, bypass contracts, or access implementation details directly. Over time, these shortcuts increase coupling, reduce maintainability, and gradually erode the intended structure of the system.
 
 ApplicationComposition prevents this.
 
-By limiting visibility and controlling how the system is assembled, it ensures that interaction follows the intended architectural rules.
+By controlling how the application is assembled and limiting visibility to implementation assemblies, it reinforces the intended architectural boundaries and ensures that interaction follows approved architectural paths.
 
-This keeps the system consistent.
+The result is a more consistent architecture.
 
-It also reduces the reliance on developer discipline. Instead of expecting developers to follow rules, the system enforces those rules through its structure.
+Rather than relying solely on developer discipline to preserve architectural integrity, the structure of the application reinforces the architectural rules automatically wherever practical.
 
 ---
 
-[← Back](03-controlled-visibility.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](05-common-failure-modes.md)
+[← Controlled Visibility](03-controlled-visibility.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Common Failure Modes →](05-common-failure-modes.md)

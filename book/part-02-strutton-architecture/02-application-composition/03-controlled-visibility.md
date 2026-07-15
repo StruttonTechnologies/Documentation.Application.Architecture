@@ -2,22 +2,24 @@
 
 One of the primary goals of this architecture is to prevent direct access to implementation details.
 
-ApplicationComposition plays a key role in enforcing this.
+ApplicationComposition plays a central role in achieving this goal.
 
-The application entry point does not reference implementation assemblies directly. Instead, it depends only on ApplicationComposition, which exposes a unified registration.
+The application entry point does not reference implementation assemblies directly. Instead, it depends only on ApplicationComposition, which serves as the single composition point for assembling the application.
 
-This limits what the application can see.
+This intentionally limits what the application can see.
 
-Because implementation assemblies are not directly referenced, developers cannot bypass architectural boundaries by accessing them directly. Interaction must occur through defined contracts.
+Because implementation assemblies remain hidden, developers cannot bypass architectural boundaries by directly accessing implementation code. Interaction occurs only through explicitly defined contracts and approved architectural paths.
 
-This enforces the intended structure.
+This reinforces the intended dependency direction.
 
-By controlling visibility, the architecture ensures that dependencies follow the correct direction and that interaction occurs only through approved paths.
+Architectural units communicate only through the responsibilities they intentionally expose. Implementation details remain hidden, reducing opportunities for unintended coupling and architectural drift.
 
-This is not achieved through convention.
+This behavior is not enforced through convention or documentation.
 
-It is enforced through the structure of the system itself.
+It is enforced by the physical structure of the system itself.
 
 ---
 
-[← Back](02-distributed-registration.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](04-why-this-matters.md)
+[← Distributed Registration](02-distributed-registration.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Why This Matters →](04-why-this-matters.md)

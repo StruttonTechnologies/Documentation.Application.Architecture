@@ -1,23 +1,25 @@
-# What Application Composition Is
+# What ApplicationComposition Is
 
-ApplicationComposition is responsible for assembling the system.
+ApplicationComposition is responsible for assembling the application.
 
-It provides a single entry point for registering all services required by the application while keeping that registration logic organized and controlled.
+It provides a single composition point where the independently developed architectural units that make up the system are brought together to form a complete application.
 
-Instead of placing all registration logic in the application entry point, ApplicationComposition gathers registrations from across the system and combines them into a unified structure.
+Rather than requiring the application entry point to understand every implementation assembly, ApplicationComposition owns that responsibility. It gathers registrations from across the system and assembles them into a single, cohesive application.
 
 This separates construction from execution.
 
-The application entry point does not need to understand the internal structure of the system. It delegates that responsibility to ApplicationComposition, which knows how to assemble the application correctly.
+The responsibility of building the application belongs to ApplicationComposition. The responsibility of executing the application belongs to the architectural units it assembles. By separating these concerns, the application entry point remains focused on starting the application rather than understanding how it is constructed.
 
-ApplicationComposition is a composition concern.
+ApplicationComposition is itself an architectural unit.
 
-It is allowed to reference implementation assemblies because its role is to build the system, not to participate in its runtime behavior.
+Unlike most architectural units, it is intentionally allowed to reference implementation assemblies because its responsibility is to construct the system rather than participate in its runtime behavior.
 
-This distinction is important.
+This distinction is fundamental to the architecture.
 
-By isolating composition into a single controlled area, the system can enforce architectural rules without exposing implementation details to the rest of the application.
+By isolating composition into a single controlled area, architectural boundaries remain intact while implementation details remain hidden from the rest of the application. The result is an architecture that reinforces its own structure instead of relying solely on developers to preserve it.
 
 ---
 
-[← Back](README.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](02-distributed-registration.md)
+[← Chapter Overview](README.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Distributed Registration →](02-distributed-registration.md)
