@@ -1,21 +1,23 @@
 # What Service-Based Architecture Is
 
-A service-based architecture organizes a system into independent modules.
+Service-based architecture organizes a system into a small number of business-aligned services or modules with clearly defined responsibilities.
 
-Each module represents a group of related functionality and contains its own internal structure. These modules exist within a single deployable application but are treated as separate areas of responsibility.
+These units are more explicit than the internal layers of a clean monolith, but they do not necessarily require the fine-grained distribution associated with microservices.
 
-The architecture itself does not change.
+A service-based system may still be deployed as one application, as several larger deployable services, or through a combination of both. The defining characteristic is not the number of deployments.
 
-Layers, boundaries, contracts, and controlled interaction still apply. The difference is how those concepts are organized.
+It is the strength of the business boundaries.
 
-Instead of a single unified structure, the system is divided into multiple modules, each with its own internal boundaries.
+Each service or module owns a cohesive area of behavior, its internal implementation, and the contracts through which other parts of the system interact with it.
 
-Modules do not directly interact with the internal implementation of other modules.
+The architecture established in Part 2 remains applicable within each unit.
 
-Interaction occurs through defined contracts, ensuring that boundaries are respected even within a single application.
+Responsibilities remain explicit. Contracts regulate interaction. Internal implementation remains hidden. Dependency direction remains controlled. The architecture continues to enforce the intended boundaries.
 
-This creates a system that is both cohesive and modular.
+Service-based architecture therefore strengthens organization without assuming that every responsibility requires an independent distributed service.
 
 ---
 
-[← Back](README.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](02-how-it-differs-from-a-clean-monolith.md)
+[← Chapter Overview](README.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[How It Differs from a Clean Monolith →](02-how-it-differs-from-a-clean-monolith.md)

@@ -1,29 +1,32 @@
 # What a Clean Monolith Is
 
-A monolith is a system that is deployed as a single unit.
+A monolith is an application deployed as a single unit.
 
-This does not define its internal structure.
+That definition describes deployment, not internal architecture.
 
-A clean monolith is a monolith with enforced architecture.
+A clean monolith is a single deployable application whose internal responsibilities, boundaries, contracts, and dependency rules remain clearly defined and structurally enforced.
 
-It maintains clear boundaries, controlled interaction, and well-defined responsibilities within a single deployable application.
+The application may run as one process and be released as one unit, but its internal architecture does not collapse into one undifferentiated body of code.
 
-The system you have seen in the previous chapters is a clean monolith.
+Within a clean monolith:
 
-It has:
+- responsibilities have clear owners
+- layers organize those responsibilities
+- boundaries prevent unintended interaction
+- contracts expose permitted capabilities
+- dependencies follow a controlled direction
+- implementation details remain hidden
 
-- layered responsibilities  
-- controlled dependency direction  
-- contracts defining interaction  
-- separation between DTOs and entities  
-- enforced visibility through composition  
+The architecture presented in Part 2 can operate entirely within this style.
 
-All of this exists within a single deployment.
+The application remains one deployable system while its internal structure continues to protect the architectural model.
 
-The difference is not in the architecture.
+The defining characteristic is not that everything is together.
 
-The difference is in how it is deployed.
+It is that everything remains structured while being deployed together.
 
 ---
 
-[← Back](README.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](02-how-this-architecture-fits.md)
+[← Chapter Overview](README.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[How This Architecture Fits →](02-how-this-architecture-fits.md)

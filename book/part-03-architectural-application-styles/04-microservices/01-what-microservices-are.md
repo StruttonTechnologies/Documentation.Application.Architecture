@@ -1,25 +1,27 @@
 # What Microservices Are
 
-Microservices are a way of organizing a system into independently deployed services.
+Microservices are independently deployable services organized around clearly defined business responsibilities.
 
-Each service represents a distinct area of responsibility and operates as its own application. Services communicate with each other over a network rather than through direct in-process calls.
+Each service owns a cohesive capability, its internal behavior, and the data required to fulfill that responsibility. Other services interact with it only through explicitly defined contracts.
 
-This is a change in deployment and communication, not in architecture.
+Independent deployment is a defining characteristic.
 
-The same principles still apply.
+A service can be released, operated, and scaled without requiring the entire system to be deployed as one unit. This independence creates flexibility, but it also turns many internal interactions into distributed communication.
 
-- responsibilities must be clearly defined  
-- boundaries must be enforced  
-- interaction must be controlled through contracts  
+Microservices do not eliminate the need for internal architecture.
 
-The difference is that these boundaries are now physical.
+Each service still requires clear responsibilities, layers, boundaries, dependency direction, contracts, composition, execution flow, and persistence ownership. A service without internal structure is simply a small unstructured application.
 
-Instead of existing within a single application, they exist across independently deployed services.
+The system also requires architecture between services.
 
-This makes the separation stronger.
+Service boundaries must reflect meaningful ownership. Contracts must remain stable. Data must have clear authority. Cross-service behavior must acknowledge latency, partial failure, and independent change.
 
-It also makes coordination more complex.
+Microservices are therefore not architecture by themselves.
+
+They are a distributed style in which architectural boundaries also become deployment boundaries.
 
 ---
 
-[← Back](README.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](02-how-the-architecture-applies.md)
+[← Chapter Overview](README.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[How the Architecture Applies →](02-how-the-architecture-applies.md)

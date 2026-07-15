@@ -1,29 +1,29 @@
 # What It Costs
 
-Microservices introduce significant complexity.
+Microservices replace some forms of internal complexity with distributed complexity.
 
-Communication is no longer in-process.
+Communication now occurs across networks. Requests experience latency. Services may be unavailable independently. A workflow can succeed in one service and fail in another. Operations that were once locally transactional may require coordination across separate transaction boundaries.
 
-Every interaction between services involves network communication. This introduces latency, failure scenarios, and the need for retry and resilience strategies.
+Operational responsibility also increases.
 
-Consistency becomes more difficult.
+Each service must be deployed, observed, secured, configured, supported, and recovered. Debugging requires tracing behavior across process and service boundaries. Testing must account for unavailable dependencies, delayed communication, incompatible contracts, and partial failure.
 
-Transactions cannot easily span multiple services. Coordinating changes across services requires careful design and often introduces eventual consistency.
+Data becomes more difficult to coordinate.
 
-Operational overhead increases.
+Clear ownership is necessary, but independently owned data introduces consistency and reporting challenges. Sharing a database may reduce short-term effort while quietly recreating the coupling the service boundaries were intended to prevent.
 
-Each service must be deployed, monitored, and maintained. This requires infrastructure, tooling, and operational maturity.
+Organizational costs increase as well.
 
-Debugging becomes harder.
+Teams must maintain contracts, coordinate changes, and accept responsibility for operating the services they own.
 
-Tracing behavior across multiple services is more complex than within a single application.
+These costs are not arguments against microservices.
 
-These costs are often underestimated.
+They are the price of independent deployment and distributed ownership.
 
-Microservices are not a simplification.
-
-They are a tradeoff.
+Microservices are appropriate only when the benefits of that independence justify the permanent complexity the system and organization must carry.
 
 ---
 
-[← Back](03-what-you-gain.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../05-what-changes-and-what-stays-the-same/README.md)
+[← What You Gain](03-what-you-gain.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[What Changes and What Stays the Same →](../05-what-changes-and-what-stays-the-same/README.md)

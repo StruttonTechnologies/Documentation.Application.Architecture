@@ -1,31 +1,33 @@
 # What Changes
 
-While the architecture remains the same, its organization and enforcement evolve as systems scale.
+Although the architectural principles remain consistent, the mechanisms used to represent and enforce them change as the application style evolves.
 
-Boundaries move.
+Boundaries become more explicit.
 
-In a clean monolith, boundaries exist within a single application. In a service-based system, boundaries become more explicit between modules. In microservices, boundaries become physical and enforced through deployment.
+In a clean monolith, boundaries are primarily enforced within one application. In a service-based system, business modules strengthen those boundaries. In microservices, selected boundaries also become process, network, and deployment boundaries.
 
 Communication changes.
 
-Interaction that was once in-process becomes modular and eventually network-based. This introduces latency, failure scenarios, and the need for more careful coordination.
+In-process interaction may become cross-module communication and eventually distributed communication. Latency, availability, compatibility, and partial failure become part of architectural decision-making.
 
-Deployment changes.
+Transaction scope changes.
 
-A single application becomes multiple deployable units. This increases flexibility but also increases operational complexity.
+A local application may coordinate work within one transaction boundary. Distributed services own separate transactions, requiring business workflows to account for independent completion and failure.
 
-Ownership changes.
+Deployment and operation change.
 
-As systems grow, responsibility is often distributed across teams. This requires stronger boundaries and clearer contracts.
+One release unit becomes several. Independent deployment provides flexibility while increasing the need for observation, coordination, support, and recovery.
 
-Operational complexity increases.
+Ownership becomes more explicit.
 
-Monitoring, debugging, and maintaining the system becomes more difficult as it becomes more distributed.
+As responsibilities are divided among modules, services, and teams, contracts and data authority require greater discipline.
 
-These changes are not architectural.
+These are meaningful changes.
 
-They are consequences of scale.
+They are changes in organization, communication, deployment, and operation—not replacements for the underlying architecture.
 
 ---
 
-[← Back](01-what-stays-the-same.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](03-why-this-distinction-matters.md)
+[← What Stays the Same](01-what-stays-the-same.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Why This Distinction Matters →](03-why-this-distinction-matters.md)

@@ -1,33 +1,31 @@
 # What Stays the Same
 
-The architecture remains consistent across all application styles.
+The fundamental architecture remains consistent across application styles.
 
-The same principles apply whether the system is a clean monolith, a service-based system, or a set of microservices.
+Whether the system is deployed as a clean monolith, organized into business-aligned services, or distributed as microservices, the same principles continue to apply.
 
-Responsibilities are still defined.
+Responsibilities still require clear ownership.
 
-Each part of the system has a clear role, and those roles do not change based on how the system is deployed.
+Layers still organize technical responsibilities where layered separation is appropriate. Boundaries still protect responsibilities. Dependency direction still controls interaction. Contracts still define the permitted surface of communication.
 
-Boundaries are still enforced.
+Interaction and business execution remain separate.
 
-Interaction is controlled, and components do not depend on internal implementation details outside their defined scope.
+External representations should not become domain models. Internal implementation should not become part of external contracts. Persistence should remain isolated behind explicit responsibilities.
 
-Contracts still define interaction.
+Transaction ownership remains explicit.
 
-All communication between parts of the system occurs through well-defined interfaces.
+The architectural unit coordinating a local request or workflow owns the boundary of the work it can complete. Distribution may narrow that boundary, but it does not remove the need for ownership.
 
-Data remains separated by purpose.
+The architecture must still protect itself.
 
-DTOs are used for interaction. Entities are used for execution.
+Visibility, dependency control, composition, and explicit contracts remain necessary regardless of the number of deployable units.
 
-The system still enforces its structure.
+Application style changes the physical arrangement of the system.
 
-The rules of the architecture are maintained through visibility and dependency control, not through convention.
-
-These principles do not change.
-
-They define the architecture itself.
+It does not replace the principles that make the system understandable.
 
 ---
 
-[← Back](README.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](02-what-changes.md)
+[← Chapter Overview](README.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[What Changes →](02-what-changes.md)

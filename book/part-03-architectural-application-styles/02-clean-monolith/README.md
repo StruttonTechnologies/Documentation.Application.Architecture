@@ -1,22 +1,24 @@
 # Chapter 2 — Clean Monolith
 
-In the previous chapter, architecture and deployment were separated.
+The previous chapter separated architecture from deployment and established that growth does not automatically require distribution.
 
-This chapter applies that distinction to one of the most commonly misunderstood system styles: the monolith.
+The simplest application style capable of supporting the architecture is often a clean monolith.
 
-A monolith is often treated as a flawed or outdated approach. In reality, a monolith is simply a deployment model.
+A monolith is deployed as one unit. That deployment choice does not determine whether the internal architecture is clear, controlled, or maintainable.
 
-When combined with strong architectural discipline, it becomes a highly effective way to build and maintain systems.
+This chapter explains how the Strutton Technologies Application Architecture operates within a single deployable application and why that style is often the strongest starting point.
 
 ## In this chapter, you will learn
 
-- what a clean monolith is  
-- how the architecture described earlier fits into this model  
-- why a clean monolith is often the best starting point  
-- where this approach begins to break down  
+- what distinguishes a clean monolith from an unstructured monolith
+- how the architecture fits within a single deployable application
+- why a clean monolith minimizes unnecessary complexity
+- when a monolithic deployment may no longer satisfy the needs of the system
 
-This chapter shows that the architecture you have already seen can exist entirely within a single deployable system.
+By the end of this chapter, you will understand why a monolith can preserve strong architectural boundaries without requiring distributed deployment.
 
 ---
 
-[← Back](../01-applying-architecture-at-scale/04-common-misconceptions.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](01-what-a-clean-monolith-is.md)
+[← Common Misconceptions](../01-applying-architecture-at-scale/04-common-misconceptions.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[What a Clean Monolith Is →](01-what-a-clean-monolith-is.md)

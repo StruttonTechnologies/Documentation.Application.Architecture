@@ -1,27 +1,29 @@
 # Architecture vs Deployment
 
-Architecture and deployment are not the same thing.
+Architecture and deployment are related, but they are not the same thing.
 
-Architecture defines how a system is structured. It defines responsibilities, boundaries, interaction, and control.
+Architecture defines the structure of a system. It assigns responsibilities, establishes boundaries, controls dependencies, and governs interaction.
 
-Deployment defines how that system is packaged and run.
+Deployment defines how that system is packaged, released, and operated.
 
-These two concepts are often confused.
+A monolith is not automatically an architecture.
 
-A monolith is not an architecture. A microservice is not an architecture. They are deployment and organizational models.
+A microservice is not automatically an architecture.
 
-The architecture exists underneath them.
+They are application and deployment styles that describe how parts of a system are organized and run. The quality of the architecture depends on the structure that exists within and between those deployable units.
 
-The same architectural principles can be applied in a single deployable system or across many distributed services.
+The same architectural principles can be applied within a single deployable application, across several independently organized modules, or among many distributed services.
 
-Confusing these concepts leads to poor decisions.
+Confusing architecture with deployment leads to poor decisions.
 
-Teams may adopt a distributed deployment model expecting it to solve architectural problems. In reality, it often introduces more complexity without addressing the underlying issues.
+A team may distribute a poorly structured system expecting deployment boundaries to solve unclear responsibilities or uncontrolled dependencies. Distribution does not correct those problems. It makes them more expensive to observe, coordinate, and change.
 
-Understanding the difference is critical.
+Architecture defines the rules of the system.
 
-Architecture defines the rules. Deployment defines how those rules are realized in a running system.
+Deployment determines where and how those rules operate.
 
 ---
 
-[← Back](README.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](02-what-scaling-really-means.md)
+[← Chapter Overview](README.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[What Scaling Really Means →](02-what-scaling-really-means.md)

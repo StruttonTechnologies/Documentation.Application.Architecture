@@ -1,27 +1,27 @@
 # What You Gain
 
-Microservices provide several benefits when applied appropriately.
+Microservices can provide meaningful benefits when a system has demonstrated needs for independent ownership and deployment.
 
-They allow independent deployment.
+A service can be released without redeploying unrelated parts of the system. This allows business capabilities to evolve at different rates and reduces coordination when changes are truly independent.
 
-Different parts of the system can be updated without redeploying the entire application. This supports faster iteration and more flexible release cycles.
+Services can also scale independently.
 
-They support scalability at a finer level.
+A capability with unique workload characteristics can receive resources without scaling the entire application. Failures may be isolated so that one service does not necessarily make every capability unavailable.
 
-Individual services can be scaled based on their specific needs rather than scaling the entire system.
+Ownership can become clearer.
 
-They enable stronger ownership.
+A team may own a service from behavior through operation, creating a direct relationship between responsibility and accountability. Technology choices can vary when a genuine service-specific need justifies that independence.
 
-Teams can take responsibility for specific services, allowing for clearer boundaries in both the system and the organization.
+These benefits are valuable, but they are conditional.
 
-They reinforce boundaries.
+They appear only when service boundaries are cohesive, contracts are disciplined, data ownership is clear, and teams can support independent operation.
 
-Because services are physically separated, it is not possible to bypass boundaries through direct access.
+Microservices do not create those conditions automatically.
 
-These benefits are real.
-
-But they come with tradeoffs.
+They reward an architecture and organization already capable of sustaining them.
 
 ---
 
-[← Back](02-how-the-architecture-applies.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](04-what-it-costs.md)
+[← How the Architecture Applies](02-how-the-architecture-applies.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[What It Costs →](04-what-it-costs.md)

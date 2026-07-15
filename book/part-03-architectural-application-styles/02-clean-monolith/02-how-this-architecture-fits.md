@@ -1,24 +1,25 @@
 # How This Architecture Fits
 
-The architecture described in Part 2 maps directly to a clean monolith.
+The Strutton Technologies Application Architecture maps naturally to a clean monolith.
 
-All layers exist within the same application, but they are separated by structure rather than by deployment.
+The complete execution model exists within one deployable application, but its responsibilities remain separated through the physical and conceptual structure established in Part 2.
 
-- The Presentation layer exposes the system boundary  
-- The Application layer coordinates execution  
-- The Domain defines behavior  
-- The Infrastructure handles persistence  
+The API exposes the application boundary.
 
-Contracts enforce interaction between these areas.
+Coordinator contracts define request entry. Coordinator implementation coordinates individual requests. Orchestration coordinates broader workflows when required. Repository contracts govern persistence interaction, and infrastructure fulfills persistence responsibilities.
 
-ApplicationComposition controls how the system is assembled and prevents direct access to implementation details.
+ApplicationComposition assembles those responsibilities without exposing their implementations throughout the application.
 
-Even though everything runs as a single application, boundaries are still real.
+DTOs remain interaction representations. Domain entities remain internal business representations. Transaction ownership remains with the architectural unit coordinating the work.
 
-They are enforced through visibility and dependency control, not through physical separation.
+All of these responsibilities operate in-process, but they do not become architecturally indistinguishable.
 
-This is what makes the monolith clean.
+The boundaries are enforced through contracts, assembly visibility, dependency direction, and controlled composition rather than through network separation.
+
+This is how a single deployable application can remain architecturally closed and internally disciplined.
 
 ---
 
-[← Back](01-what-a-clean-monolith-is.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](03-why-it-works.md)
+[← What a Clean Monolith Is](01-what-a-clean-monolith-is.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Why It Works →](03-why-it-works.md)

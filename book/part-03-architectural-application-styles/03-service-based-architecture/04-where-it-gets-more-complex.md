@@ -1,29 +1,25 @@
 # Where It Gets More Complex
 
-A service-based architecture introduces additional structure.
+Service-based architecture introduces stronger boundaries, but those boundaries require deliberate coordination.
 
-While this improves organization, it also introduces new challenges.
+The system must define who owns shared information, how modules communicate, and how behavior spanning multiple business areas is coordinated. Contracts become more significant because direct implementation access would undermine the module boundaries.
 
-Boundaries become more important.
+Data ownership also becomes more explicit.
 
-Modules must not depend on each other’s internal implementation. This requires clear contracts and disciplined interaction.
+Allowing every module to reach into the same persistence structures can create hidden coupling even when the code appears modular. Clear ownership is required so one module does not silently depend on another module's internal data model.
 
-Composition becomes more critical.
+Cross-module workflows require care.
 
-The system must be assembled in a way that respects module boundaries while still allowing the application to function as a whole.
+A business operation may involve several modules, but that does not justify dissolving their boundaries. The system must coordinate the workflow through explicit contracts while preserving the ownership of each participating responsibility.
 
-Read and write concerns may also become more complex.
+Team and release coordination may also become more demanding, particularly when modules evolve at different rates.
 
-As modules become more independent, accessing data across module boundaries requires careful handling to avoid breaking architectural rules.
+These costs are lower than those of fully distributed microservices, but they are still real.
 
-This added complexity is intentional.
-
-It is introduced to control growth and maintain clarity as the system expands.
-
-The goal is not to eliminate complexity.
-
-The goal is to manage it.
+Service-based architecture provides value when stronger business separation solves an actual organizational or architectural problem. Introducing modules without clear responsibilities merely creates additional structure without meaningful ownership.
 
 ---
 
-[← Back](03-why-modules-matter.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../04-microservices/README.md)
+[← Why Modules Matter](03-why-modules-matter.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Microservices →](../04-microservices/README.md)

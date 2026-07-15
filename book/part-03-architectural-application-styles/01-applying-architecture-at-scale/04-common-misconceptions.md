@@ -1,23 +1,25 @@
 # Common Misconceptions
 
-There are several common misconceptions about architecture and scale.
+Several common misconceptions lead teams to choose application styles for the wrong reasons.
 
-One is that monoliths are inherently flawed.
+One misconception is that monoliths are inherently poorly structured.
 
-In reality, monoliths fail when structure is ignored. A well-structured monolith can be highly effective and easier to maintain than more complex alternatives.
+A monolith becomes difficult when responsibilities blur, boundaries are ignored, and dependencies become uncontrolled. A well-structured monolith can remain understandable, maintainable, and effective for many years.
 
 Another misconception is that microservices solve architectural problems.
 
-Microservices introduce distribution. They do not fix poor structure. In many cases, they amplify existing issues.
+Microservices introduce independent deployment and distributed communication. They do not create clear responsibilities, effective boundaries, or stable contracts automatically. When poor structure is distributed, the result is a poorly structured distributed system.
 
-There is also a tendency to equate complexity with maturity.
+There is also a tendency to equate distribution with maturity.
 
-More distributed systems are often seen as more advanced. In practice, they introduce additional operational and communication challenges that are not always necessary.
+A more operationally complex system is not necessarily a more advanced system. Maturity is demonstrated by choosing the simplest structure that satisfies real needs and by understanding the costs of every additional boundary.
 
-These misconceptions lead to poor decisions.
+A final misconception is that application style should be selected by trend or expected growth alone.
 
-Architecture should be chosen based on the needs of the system, not trends or assumptions.
+Architectural decisions should respond to demonstrated constraints, not assumptions about what a successful system is supposed to look like.
 
 ---
 
-[← Back](03-how-structure-evolves.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../02-clean-monolith/README.md)
+[← How Structure Evolves](03-how-structure-evolves.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Clean Monolith →](../02-clean-monolith/README.md)

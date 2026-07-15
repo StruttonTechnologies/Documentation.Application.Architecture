@@ -1,27 +1,25 @@
 # When It Breaks Down
 
-A monolith does not fail because it is a monolith.
+A monolith does not fail merely because it is deployed as one unit.
 
-It fails when structure is not enforced.
+It fails architecturally when its internal structure is no longer preserved.
 
-When boundaries are ignored, responsibilities mix, and dependencies become uncontrolled, the system becomes difficult to maintain.
+When responsibilities spread, boundaries are bypassed, shared areas become dumping grounds, and dependencies form without control, the application gradually becomes an unstructured monolith. The problem is not the deployment model. The problem is architectural erosion.
 
-This is often referred to as a “big ball of mud.”
+A clean monolith may also reach legitimate limits.
 
-This is not an architectural limitation.
+Different parts of the system may require independent release schedules. Specific capabilities may need to scale separately. Teams may require stronger ownership boundaries. Availability or regulatory requirements may demand greater isolation.
 
-It is a lack of architectural discipline.
+These pressures do not automatically require microservices.
 
-There are also cases where a monolith may no longer be sufficient.
+They indicate that the current organization and deployment model should be reevaluated.
 
-As systems grow, factors such as team size, independent deployment needs, and operational scaling may require a different approach.
+The architecture itself does not need to be discarded. Its responsibilities and boundaries need to be reorganized into a style capable of satisfying the new constraints.
 
-At that point, the architecture does not need to be replaced.
-
-It needs to be reorganized.
-
-Understanding when this transition is necessary is critical, but it should not be premature.
+The transition should occur because the existing style no longer meets demonstrated needs, not because distribution is assumed to be the natural destination of every successful system.
 
 ---
 
-[← Back](03-why-it-works.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../03-service-based-architecture/README.md)
+[← Why It Works](03-why-it-works.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Service-Based Architecture →](../03-service-based-architecture/README.md)
