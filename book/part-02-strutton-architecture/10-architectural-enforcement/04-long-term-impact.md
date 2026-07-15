@@ -22,4 +22,4 @@ Its purpose is to preserve clarity, consistency, and ownership so the architectu
 
 [← What This Prevents](03-what-this-prevents.md) |
 [Table of Contents](../../04-table-of-contents.md) |
-[Part 2 Summary →](../99-part-02-summary/README.md)
+[Part 2 Summary →](../part-02-summary/README.md)
