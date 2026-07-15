@@ -20,4 +20,4 @@ Rather than relying solely on developer discipline to preserve architectural int
 
 [← Controlled Visibility](03-controlled-visibility.md) |
 [Table of Contents](../../04-table-of-contents.md) |
-[Common Failure Modes →](05-common-failure-modes.md)
+[Common Failure Modes →](05-common-architectural-mistakes.md)
