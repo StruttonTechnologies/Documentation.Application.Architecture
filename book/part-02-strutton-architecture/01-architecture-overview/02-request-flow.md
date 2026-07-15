@@ -1,29 +1,23 @@
 # Request Flow
 
-Understanding how a request moves through the system is key to understanding the architecture.
+Understanding how a request moves through the architecture is essential to understanding how the architectural units work together.
 
-A request begins in the Presentation layer.
+Every request follows a deliberate path through the system. That path is designed to reinforce architectural boundaries, maintain clear responsibilities, and ensure that each architectural unit performs only the work it was designed to own.
 
-The API receives the request and translates it into a command or query. This command or query is defined as part of a contract, not an implementation.
+A request begins in the **Presentation** layer, where incoming data is received and translated into an application request.
 
-The request is then sent into the Application layer.
+From there, the request enters the **Application** layer, where execution is coordinated. Validation, transformation, business execution, and persistence are performed by the architectural units responsible for those activities. Throughout execution, each architectural unit communicates only through defined contracts while respecting the dependency direction established by the architecture.
 
-A handler in the Coordinator processes the request. At this point, DTOs are still in use. Validation and mapping occur here, and the request is translated into entities that represent the domain.
+As the request moves through the system, interaction models are translated into domain entities. From that point forward, the business execution operates on the domain model rather than the external representation of the data.
 
-From this point forward, execution operates on entities.
-
-If the request involves a single transaction, the handler interacts with the persistence layer through repository contracts and commits the result.
-
-If the request involves multiple steps or transactions, the handler delegates to the Orchestration layer. Orchestration coordinates the workflow and manages how those transactions are executed.
-
-The Infrastructure layer performs the actual data operations and commits changes.
-
-The result then flows back through the system, eventually returning to the Presentation layer.
+Once processing is complete, the result follows the same architectural path in reverse, eventually returning to the Presentation layer where it is translated into the response returned to the client.
 
 This flow is intentional.
 
-Each step enforces the architectural rules defined in Part 1. Responsibilities remain separated, dependencies follow a controlled direction, and interaction occurs only through defined contracts.
+Every transition reinforces the architectural principles established throughout this book. Responsibilities remain clearly separated, dependencies move in a controlled direction, and interactions occur only through explicitly defined contracts. Rather than relying solely on developer discipline, the structure of the architecture reinforces the correct flow of execution.
 
 ---
 
-[← Back](01-high-level-structure.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](03-key-design-decisions.md)
+[← High-Level Structure](01-high-level-structure.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Key Design Decisions →](03-key-design-decisions.md)

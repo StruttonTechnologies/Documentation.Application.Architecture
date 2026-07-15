@@ -1,53 +1,31 @@
-# Key Design Decisions
+# Architectural Principles
 
-This architecture is built around a set of deliberate design decisions.
-
-These decisions are not arbitrary. They exist to enforce structure and prevent common failure patterns.
+The architecture is guided by a small set of architectural principles. Together, these principles shape every architectural unit and every interaction within the system.
 
 ## Controlled Visibility
 
-The Presentation layer does not have direct access to implementation assemblies.
+Architectural units expose only the capabilities required by the rest of the system. Implementation details remain hidden behind explicit boundaries, reducing opportunities for unintended coupling.
 
-It interacts only through contracts and ApplicationComposition. This prevents developers from bypassing architectural boundaries and ensures that all interaction follows the intended structure.
+## Explicit Composition
 
-## Composition as a Central Concern
+The application is assembled through a single composition point. This centralizes system assembly while allowing individual architectural units to remain independently responsible for their own implementation.
 
-ApplicationComposition is responsible for assembling the system.
+## Separation of Interaction and Execution
 
-Each implementation assembly defines its own service registrations. ApplicationComposition collects these registrations and exposes them as a single unit.
+Interaction contracts define how architectural units communicate. Execution remains the responsibility of implementation. This separation allows architectural boundaries to remain stable while implementations evolve independently.
 
-This keeps registration logic close to the code it configures while maintaining a clean entry point for the application.
+## Separation of External and Domain Models
 
-## Separation of Contracts and Implementation
+External interaction models and domain models serve different responsibilities. Separating them prevents external concerns from leaking into the core business model while allowing each to evolve independently.
 
-Contracts are defined separately from implementation.
+## Architectural Enforcement
 
-The API is aware of commands and queries, but not the handlers that execute them. This prevents direct access to execution logic and enforces the use of the intended interaction path.
+Whenever practical, architectural rules are reinforced through the physical structure of the system rather than relying solely on developer discipline. Controlled dependencies, explicit responsibilities, and limited visibility make the intended architectural path the natural path for developers to follow.
 
-## Controlled Use of Orchestration
-
-Orchestration is used only when necessary.
-
-If a request can be completed within a single transaction, the Coordinator handles it directly. If multiple steps are required, Orchestration is introduced to manage the workflow.
-
-This avoids unnecessary complexity while still supporting more advanced scenarios.
-
-## DTO and Entity Separation
-
-DTOs are used for interaction.
-
-Entities are used for execution.
-
-The transition between the two occurs within the Coordinator. This ensures that domain concepts are not exposed prematurely and that external concerns do not leak into core logic.
-
-## Architecture as Enforcement
-
-The architecture is designed so that incorrect usage is difficult or impossible.
-
-Developers are not expected to remember the rules. The system enforces them through dependency control and visibility.
-
-This is the defining characteristic of the architecture.
+These principles provide the foundation for every architectural unit introduced throughout the remainder of this book. As each chapter explores a specific responsibility, these principles remain the consistent thread that connects the architecture into a cohesive whole.
 
 ---
 
-[← Back](02-request-flow.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../02-application-composition/README.md)
+[← Request Flow](02-request-flow.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Application Composition →](../02-application-composition/README.md)
