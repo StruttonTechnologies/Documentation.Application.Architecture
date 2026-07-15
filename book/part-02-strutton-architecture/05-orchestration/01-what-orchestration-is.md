@@ -1,23 +1,28 @@
 # What Orchestration Is
 
-Orchestration is responsible for coordinating multi-step execution.
+Orchestration is responsible for coordinating multi-step workflows.
 
-While the Coordinator handles individual requests, Orchestration manages workflows that involve multiple operations or transactions.
+While the Coordinator is responsible for coordinating the execution of an individual request, Orchestration is responsible for coordinating work that extends beyond the scope of a single request.
 
-These workflows may require:
+These workflows may involve:
 
-- multiple interactions with persistence  
-- conditional execution paths  
-- coordination between different parts of the system  
+- multiple execution steps
+- multiple architectural units
+- conditional execution paths
+- multiple transactions when required
 
 Orchestration does not define business rules.
 
-It defines how work is organized and executed across multiple steps.
+Its responsibility is to coordinate how work progresses across multiple steps while preserving the architectural boundaries established throughout the system.
 
-This distinction is important.
+This distinction is fundamental.
 
-The Coordinator executes a request. Orchestration coordinates how that execution is carried out when it involves more than a single operation.
+The Coordinator coordinates the execution of an individual request.
+
+Orchestration coordinates the execution of an entire workflow.
 
 ---
 
-[← Back](README.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](02-when-orchestration-is-used.md)
+[← Chapter Overview](README.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[When Orchestration Is Used →](02-when-orchestration-is-used.md)

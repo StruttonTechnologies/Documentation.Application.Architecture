@@ -2,18 +2,20 @@
 
 Orchestration is not required for every request.
 
-If a request can be completed within a single transaction, the Coordinator handles it directly.
+If a request can be completed through the execution of a single request without requiring additional workflow coordination, the Coordinator is responsible for handling it directly.
 
-Introducing Orchestration in these cases adds unnecessary complexity.
+Introducing Orchestration in these situations adds unnecessary complexity.
 
-It creates additional layers of abstraction without providing value. This can make the system harder to understand and maintain.
+It introduces additional architectural responsibilities without providing corresponding architectural value. The result is a solution that is more difficult to understand, maintain, and evolve.
 
-The goal is not to use Orchestration everywhere.
+The goal is not to use Orchestration whenever it is available.
 
-The goal is to use it only when it is needed.
+The goal is to use it only when workflow coordination is genuinely required.
 
-This keeps the architecture simple where possible and structured where necessary.
+This keeps the architecture simple where possible while introducing additional structure only when the complexity of the workflow justifies it.
 
 ---
 
-[← Back](02-when-orchestration-is-used.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](04-how-orchestration-works.md)
+[← When Orchestration Is Used](02-when-orchestration-is-used.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[How Orchestration Works →](04-how-orchestration-works.md)

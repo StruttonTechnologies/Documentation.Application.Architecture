@@ -1,22 +1,27 @@
 # Chapter 5 — Orchestration
 
-In the previous chapter, the Coordinator was introduced as the entry point for executing requests within the Application layer.
+The previous chapter introduced the Coordinator and explained how individual requests are coordinated within the Application layer.
 
-The next step is understanding how more complex workflows are handled.
+Not all requests, however, can be completed through a single request execution.
 
-Not all requests are equal. Some can be completed within a single transaction, while others require multiple steps that must be coordinated carefully.
+Some business operations require multiple steps, multiple transactions, or coordination across several architectural responsibilities while still presenting a single logical operation to the caller.
 
 This chapter introduces Orchestration.
 
+Orchestration extends the architecture beyond the execution of an individual request by coordinating more complex workflows while preserving the same architectural boundaries established throughout the system.
+
 ## In this chapter, you will learn
 
-- what Orchestration is and how it differs from the Coordinator  
-- when Orchestration is required  
-- when it should not be used  
-- how Orchestration manages multi-step workflows  
+- the responsibility of the Orchestration layer
+- how Orchestration differs from the Coordinator
+- when orchestration is appropriate
+- when it should be avoided
+- how complex workflows are coordinated while preserving architectural boundaries
 
-This chapter focuses on coordinating execution when a request cannot be handled as a single, isolated operation.
+By the end of this chapter, you will understand why coordination of a single request and orchestration of a broader workflow are separate architectural responsibilities.
 
 ---
 
-[← Back](../04-coordinator-implementation/05-common-failure-modes.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](01-what-orchestration-is.md)
+[← Coordinator Implementation](../04-coordinator-implementation/05-common-architectural-mistakes.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[What Is Orchestration? →](01-what-orchestration-is.md)

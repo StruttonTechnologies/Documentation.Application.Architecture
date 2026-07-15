@@ -1,25 +1,30 @@
 # How Orchestration Works
 
-When a request requires Orchestration, the Coordinator delegates execution.
+When a request requires Orchestration, the Coordinator delegates responsibility for the workflow.
 
-Instead of handling all logic directly, the handler calls into the Orchestration layer through a contract. This maintains separation between coordination and execution.
+Rather than coordinating every execution step itself, the Coordinator invokes the Orchestration layer through its contracts. This preserves the separation between request coordination and workflow coordination.
 
-The Orchestration layer then manages the workflow.
+The Orchestration layer then coordinates the workflow.
 
-It determines the sequence of operations, invokes the necessary components, and ensures that each step is executed correctly.
+It determines how the workflow progresses, invokes the architectural units responsible for each step, and ensures that execution follows the intended sequence.
 
-This may involve:
+Depending on the workflow, this may involve:
 
-- calling repositories multiple times  
-- managing intermediate results  
-- coordinating commits  
+- coordinating multiple execution steps
+- invoking multiple architectural units
+- managing intermediate state
+- coordinating multiple transactions when required
 
-Each step is performed in a controlled manner.
+Each responsibility remains clearly defined.
 
-The Coordinator initiates the process, but Orchestration manages how the work is carried out across multiple steps.
+The Coordinator remains responsible for coordinating the execution of an individual request.
 
-This keeps responsibilities clear.
+The Orchestration layer remains responsible for coordinating the workflow that fulfills that request.
+
+This separation preserves the architectural boundaries while allowing complex business operations to remain organized and maintainable.
 
 ---
 
-[← Back](03-when-orchestration-is-not-used.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](05-common-failure-modes.md)
+[← When Orchestration Is Not Used](03-when-orchestration-is-not-used.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Common Architectural Mistakes →](05-common-failure-modes.md)

@@ -1,21 +1,19 @@
-# Common Failure Modes
+# Common Architectural Mistakes
 
-Orchestration is often overused.
+Orchestration is often introduced when it is not required.
 
-One common issue is introducing Orchestration for simple requests that could be handled within a single transaction. This adds unnecessary complexity and reduces clarity.
+One common mistake is using Orchestration for requests that can be completed through the coordination of a single request. Doing so introduces additional architectural complexity without providing additional architectural value.
 
-Another failure mode is placing too much logic in the Coordinator.
+Another mistake is allowing the Coordinator to absorb workflow responsibilities. When handlers begin coordinating complex workflows, the distinction between request coordination and workflow coordination gradually disappears, making the architecture more difficult to understand and maintain.
 
-When complex workflows are handled directly in handlers, they become difficult to understand and maintain. This blurs the separation between execution and coordination.
+A third mistake is giving Orchestration responsibilities that belong elsewhere. Orchestration coordinates workflows; it does not define business rules, perform persistence operations, or replace the architectural units responsible for those concerns.
 
-There is also a tendency to mix responsibilities within Orchestration.
+Each of these decisions weakens the architecture by blurring responsibilities and reducing the clarity of its architectural boundaries.
 
-Orchestration should coordinate execution, not define business rules or perform low-level operations. When these responsibilities are mixed, the structure of the system becomes unclear.
-
-All of these issues reduce clarity.
-
-Orchestration provides value when it is used intentionally and only when required.
+Orchestration provides value when it owns only the responsibility for coordinating workflows that extend beyond the scope of a single request.
 
 ---
 
-[← Back](04-how-orchestration-works.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../06-repository-and-persistence/README.md)
+[← How Orchestration Works](04-how-orchestration-works.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Repository and Persistence →](../06-repository-and-persistence/README.md)
