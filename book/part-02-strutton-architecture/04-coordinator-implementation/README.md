@@ -1,20 +1,23 @@
 # Chapter 4 — Coordinator Implementation
 
-In the previous chapter, requests were introduced as commands and queries that enter the system through Coordinator contracts.
+The previous chapter introduced Coordinator contracts and established how requests enter the Application layer through a single, controlled architectural entry point.
 
-The next step is understanding how those requests are executed.
+Once a request has entered the architecture, responsibility shifts from interaction to execution.
 
-This chapter focuses on the Coordinator implementation, where requests are processed and translated into actions within the system.
+This chapter introduces the Coordinator implementation, the architectural unit responsible for coordinating request execution. It explains how requests begin their execution, how responsibilities are delegated within the Application layer, and where the transition from interaction models to domain execution occurs.
 
 ## In this chapter, you will learn
 
-- the role of the Coordinator in handling requests  
-- how handlers execute commands and queries  
-- how validation and mapping are applied  
-- where the transition from DTOs to entities occurs  
+- the responsibility of the Coordinator
+- how requests begin execution within the Application layer
+- where validation and transformation occur
+- where interaction models transition into domain entities
+- how the Coordinator delegates work while preserving architectural boundaries
 
-This chapter focuses on execution at the entry point of the application layer. Later chapters will explore how more complex workflows and persistence are handled.
+By the end of this chapter, you will understand why the Coordinator is responsible for coordinating execution rather than performing every aspect of the request itself.
 
 ---
 
-[← Back](../03-request-entry-and-coordinator-contracts/05-common-failure-modes.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](01-role-of-the-coordinator.md)
+[← Request Entry and Coordinator Contracts](../03-request-entry-and-coordinator-contracts/05-common-architectural-mistakes.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Role of the Coordinator →](01-role-of-the-coordinator.md)

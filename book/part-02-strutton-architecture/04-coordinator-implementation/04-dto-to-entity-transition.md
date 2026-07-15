@@ -2,24 +2,30 @@
 
 The transition from DTOs to entities occurs within the Coordinator.
 
-Before this point, the system operates on data structures designed for interaction. DTOs represent incoming requests and outgoing responses. They are shaped for communication, not execution.
+Before this point, the architecture operates on interaction models designed for communication with external consumers. DTOs describe incoming requests and outgoing responses. They exist to support interaction rather than business execution.
 
-Within the Coordinator, DTOs are mapped to entities.
+Within the Coordinator, those interaction models transition into domain entities.
 
-Entities represent domain concepts and are used for execution. They carry meaning within the system and are not tied to external concerns such as transport or formatting.
+Entities represent the concepts and behaviors of the domain. They are used for business execution and remain independent of external concerns such as transport, serialization, or presentation.
 
-This creates a clear boundary.
+This transition establishes a clear architectural boundary.
 
-DTOs do not move deeper into the system. Entities are not exposed externally. Each is used only in the context where it is appropriate.
+DTOs do not move deeper into the system.
 
-This separation prevents leakage.
+Entities are not exposed outside the system.
 
-External concerns remain at the boundary of the system, and internal behavior remains focused on domain concepts. Changes to how data is received or returned do not affect how the system behaves internally.
+Each model exists only within the architectural responsibility for which it was designed.
 
-This transition is one of the most important enforcement points in the architecture.
+This separation prevents architectural leakage.
 
-It ensures that interaction and execution remain distinct and that the system maintains a clear separation of responsibilities.
+Interaction concerns remain at the boundary of the architecture, while domain execution remains focused on business concepts. Changes to external interaction therefore do not directly affect the internal behavior of the system.
+
+This transition is one of the primary architectural enforcement points within the application.
+
+It preserves the separation between interaction and execution while reinforcing the distinct responsibilities of the Presentation and Application layers.
 
 ---
 
-[← Back](03-validation-and-mapping.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](05-common-failure-modes.md)
+[← Validation and Transformation](03-validation-and-mapping.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Common Architectural Mistakes →](05-common-failure-modes.md)

@@ -1,26 +1,28 @@
 # Role of the Coordinator
 
-The Coordinator is responsible for handling incoming requests.
+The Coordinator is responsible for coordinating the execution of incoming requests.
 
-It serves as the entry point for execution within the Application layer. Requests that enter the system as commands or queries are processed here.
+It serves as the architectural entry point for execution within the Application layer. Requests that enter the architecture as commands or queries begin their execution here.
 
-The Coordinator does not define business rules.
+The Coordinator does not contain business rules.
 
-Its responsibility is to manage the execution of a request. It determines how the request should be processed and ensures that it follows the architectural structure.
+Its responsibility is to coordinate how a request is processed while ensuring that execution follows the architectural structure established throughout the system.
 
-This includes:
+This responsibility includes:
 
-- validating the request  
-- mapping input data into domain representations  
-- invoking the appropriate operations  
-- returning results  
+- validating incoming interaction
+- transforming interaction models into domain representations
+- delegating work to the appropriate architectural units
+- returning results to the caller
 
 The Coordinator is intentionally limited in scope.
 
-It does not manage complex workflows or coordinate multiple transactions. Those responsibilities belong to the Orchestration layer.
+It does not manage complex workflows or coordinate multiple transactions. Those responsibilities belong to the Orchestration layer, allowing the Coordinator to remain focused on coordinating the execution of individual requests.
 
-By keeping the Coordinator focused, the architecture maintains clear separation between simple request handling and more complex execution patterns.
+By limiting the Coordinator to a single responsibility, the architecture maintains a clear separation between request coordination and workflow orchestration.
 
 ---
 
-[← Back](README.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](02-handlers-and-execution.md)
+[← Chapter Overview](README.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Handlers and Execution →](02-handlers-and-execution.md)

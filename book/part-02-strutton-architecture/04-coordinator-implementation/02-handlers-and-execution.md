@@ -1,27 +1,27 @@
 # Handlers and Execution
 
-Handlers are responsible for executing commands and queries.
+Handlers are responsible for executing individual commands and queries.
 
-Each request has a corresponding handler that defines how that request is processed. The handler contains the logic required to fulfill the request within the boundaries of the architecture.
+Each request has a corresponding handler that defines how that request is fulfilled within the architectural boundaries established by the Coordinator. A handler owns the execution of a single request while remaining focused on that request alone.
 
-Handlers operate within the Coordinator implementation.
+Handlers exist within the Coordinator implementation.
 
-They are not visible to the Presentation layer and cannot be accessed directly. This ensures that all execution follows the intended request flow.
+They are not visible outside the Application layer and cannot be accessed directly by the Presentation layer. Every request must therefore enter through the Coordinator contracts before reaching its handler.
 
-A handler performs the following steps:
+A handler is responsible for:
 
-- receives the request  
-- validates input where necessary  
-- maps DTOs into entities  
-- performs the required operations  
-- returns a result  
+- receiving a request
+- validating the request where appropriate
+- transforming interaction models into domain representations
+- delegating work to the appropriate architectural units
+- returning the result of the request
 
-Handlers are focused on a single request.
+Handlers are intentionally limited in scope.
 
-They do not coordinate multiple workflows or manage complex execution paths. This keeps them simple and predictable.
-
-When a request requires more complex behavior, the handler delegates to the Orchestration layer.
+Each handler is responsible for a single request. It does not coordinate multiple workflows or manage complex execution paths. When execution extends beyond a single request, responsibility is delegated to the Orchestration layer.
 
 ---
 
-[← Back](01-role-of-the-coordinator.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](03-validation-and-mapping.md)
+[← Role of the Coordinator](01-role-of-the-coordinator.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Validation and Transformation →](03-validation-and-mapping.md)

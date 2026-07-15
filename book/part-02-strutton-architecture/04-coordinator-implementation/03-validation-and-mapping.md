@@ -1,19 +1,23 @@
-# Validation and Mapping
+# Validation and Transformation
 
-Validation and mapping occur within the Coordinator as part of request handling.
+Before execution begins, requests must be prepared for execution.
 
-Validation ensures that incoming data is correct before execution begins. This prevents invalid requests from reaching deeper parts of the system and keeps execution focused on valid input.
+Within the Coordinator, this preparation includes validating incoming interaction and transforming that interaction into forms suitable for the architectural units responsible for execution.
 
-Mapping prepares data for execution.
+Validation ensures that requests satisfy the expectations required to begin execution. By validating requests before they progress deeper into the architecture, downstream architectural units can assume they are operating on valid input.
 
-Requests enter the system as DTOs. These DTOs represent incoming data and are structured for interaction. Before execution begins, this data must be prepared so it can be used by the system.
+Transformation prepares interaction models for execution.
 
-This preparation happens in the Coordinator.
+Requests enter the architecture as interaction models designed for communication with external consumers. Before execution begins, those interaction models are transformed into representations appropriate for the domain and the architectural units responsible for fulfilling the request.
 
-At this stage, the request is validated and shaped into a form suitable for execution. The details of how data transitions into domain representations are covered in the next section.
+This preparation occurs within the Coordinator.
 
-Keeping validation and mapping at this level ensures that deeper parts of the system receive only valid and properly prepared data.
+By keeping validation and transformation together at the architectural entry point for execution, the remainder of the system can remain focused on business execution rather than interaction concerns.
+
+The specific transition from interaction models to domain entities is explored in the next section.
 
 ---
 
-[← Back](02-handlers-and-execution.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](04-dto-to-entity-transition.md)
+[← Handlers and Execution](02-handlers-and-execution.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[DTO to Entity Transition →](04-dto-to-entity-transition.md)

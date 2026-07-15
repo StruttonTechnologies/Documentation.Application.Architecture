@@ -1,21 +1,19 @@
-# Common Failure Modes
+# Common Architectural Mistakes
 
-The Coordinator is often given too much responsibility.
+The Coordinator is sometimes given responsibilities that belong elsewhere in the architecture.
 
-One common issue is allowing handlers to contain complex workflows. This makes them harder to understand and blurs the line between simple request handling and orchestration.
+One common mistake is allowing handlers to coordinate complex workflows. As requests become more complicated, this blurs the distinction between request coordination and orchestration, making the architecture more difficult to understand and evolve.
 
-Another failure mode is skipping validation or placing it in the wrong layer.
+Another mistake is preparing requests outside the Coordinator. Validation and transformation are architectural responsibilities of request coordination. Moving them elsewhere weakens the consistency of request execution and allows interaction concerns to spread throughout the system.
 
-Validation should occur before execution. When it is placed deeper in the system, invalid data may propagate further than intended.
+A third mistake is allowing DTOs to move beyond the Coordinator. When interaction models flow deeper into the architecture, the separation between interaction and domain execution begins to erode, increasing coupling between external and internal concerns.
 
-There is also a tendency to allow DTOs to move beyond the Coordinator.
+Each of these decisions weakens the architecture by blurring responsibilities and reducing the effectiveness of its architectural boundaries.
 
-This exposes external data structures to parts of the system that should operate on domain representations, weakening the separation between interaction and execution.
-
-All of these issues reduce clarity.
-
-The Coordinator should remain focused on handling requests, applying validation, and transitioning from interaction to execution.
+The Coordinator exists to coordinate the execution of individual requests, prepare those requests for execution, and transition interaction into domain execution before delegating additional responsibilities where appropriate.
 
 ---
 
-[← Back](04-dto-to-entity-transition.md) | [Table of Contents](../../04-table-of-contents.md) | [Next →](../05-orchestration/README.md)
+[← DTO to Entity Transition](04-dto-to-entity-transition.md) |
+[Table of Contents](../../04-table-of-contents.md) |
+[Orchestration →](../05-orchestration/README.md)
