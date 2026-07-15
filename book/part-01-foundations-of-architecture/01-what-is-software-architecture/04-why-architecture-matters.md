@@ -1,26 +1,26 @@
 # Why Architecture Matters
 
-Without structure, systems drift.
+Without structure, software systems gradually drift.
 
-At first, the impact is small. The system still works. Features can still be added. Changes still go through without much resistance.
+At first, the impact is small. The system still works. New features can still be added. Changes can still be made without much resistance.
 
-Over time, the cost of those changes increases.
+Over time, however, the cost of change increases.
 
-Responsibilities begin to blur. It becomes less clear where logic belongs. Dependencies grow in uncontrolled ways, connecting parts of the system that were never meant to be tightly coupled. Understanding how something works takes longer. Making changes requires more caution.
+Responsibilities begin to blur. It becomes less clear where new functionality belongs. Dependencies grow in uncontrolled ways, connecting parts of the system that were never intended to be tightly coupled. Understanding how the system works requires more effort. Making even small changes demands greater caution.
 
 Eventually, development slows down.
 
 This is where architecture matters.
 
-Architecture does not remove complexity. Every system of any real size has complexity. What architecture does is keep that complexity from spreading in ways that are difficult to control.
+Architecture does not eliminate complexity. Every meaningful software system contains complexity. The purpose of architecture is to organize that complexity so it remains understandable, predictable, and manageable as the system evolves.
 
-It creates a structure where responsibilities remain clear and interactions remain predictable. When a change is made, it is easier to understand where that change belongs and what it might affect.
+It provides a structure where responsibilities remain clear, architectural boundaries remain protected, and interactions remain intentional. When change is required, it is easier to understand where that change belongs, what it affects, and how it should be implemented.
 
 This is not about achieving perfection.
 
-It is about maintaining control.
+It is about preserving clarity and maintaining control.
 
-A well-structured system can grow and evolve while remaining understandable. A poorly structured system becomes harder to work with over time, regardless of the tools or technologies used.
+A well-structured system can continue to grow while remaining understandable. A poorly structured system becomes progressively more difficult to develop, maintain, and evolve regardless of the tools, frameworks, or technologies it uses.
 
 Architecture is what determines which path the system follows.
 

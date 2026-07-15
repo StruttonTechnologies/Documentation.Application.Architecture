@@ -2,24 +2,26 @@
 
 Software architecture is the structure of a system.
 
-It defines how responsibilities are organized, how parts of the system interact, and how change is managed over time. This is not an abstract concept. It shows up in every decision about where code is placed and what it depends on.
+It defines how responsibilities are organized, how architectural boundaries protect those responsibilities, how parts of the system interact, and how change is managed over time.
 
-At a practical level, architecture answers a small set of questions.
+This is not an abstract concept. It appears in every decision about where code belongs, what it depends on, and what it is allowed to interact with.
 
-Where does this responsibility belong.  
-What is allowed to depend on what.  
-How does data move through the system.  
-What happens when something changes.
+At a practical level, architecture answers four fundamental questions.
+
+- Where does this responsibility belong?
+- What is allowed to depend on what?
+- How does data move through the system?
+- What happens when something changes?
 
 These questions may look simple, but they shape how a system behaves as it grows.
 
-When the answers are clear, the system becomes easier to understand. You can look at a piece of code and know why it exists and where it belongs. When the answers are unclear, that understanding starts to break down.
+When the answers are clear, the system becomes easier to understand. You can look at a piece of code and know why it exists, where it belongs, and how it fits into the overall structure. When the answers are unclear, that understanding begins to break down.
 
-Architecture exists to make those answers explicit and intentional.
+Software architecture exists to make those answers explicit, intentional, and consistently enforced.
 
 That is its purpose.
 
-Understanding that purpose is enough for now. The impact of getting it right will become clearer as we move forward.
+Understanding that purpose is enough for now. The concepts introduced throughout the remainder of Part 1 will provide the foundation needed to understand the application architecture presented in Part 2.
 
 ---
 

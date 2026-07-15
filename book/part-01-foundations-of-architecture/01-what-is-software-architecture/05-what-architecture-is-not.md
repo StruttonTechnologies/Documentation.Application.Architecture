@@ -1,24 +1,34 @@
 # What Architecture Is Not
 
-Architecture is often confused with the tools and patterns used to build systems.
+Architecture is often confused with the tools, frameworks, and patterns used to build software systems.
 
-It is important to separate these ideas.
+It is important to distinguish between architecture and implementation.
 
-Architecture is not a framework. It is not a set of libraries. It is not a diagram by itself. It is not a collection of patterns applied without context.
+Architecture is not a framework.
 
-These things can support a system. They can make certain problems easier to solve. But they do not define the structure of the system.
+It is not a programming language.
 
-You can build a system using modern frameworks and still end up with unclear responsibilities and uncontrolled dependencies.
+It is not a collection of libraries.
 
-You can also build a system using simple tools and maintain a clean, understandable structure.
+It is not a diagram by itself.
 
-The difference is not the tools.
+It is not a set of patterns applied without purpose.
 
-It is the decisions about how responsibilities are organized and how dependencies are allowed to flow.
+These things can support the implementation of a system. They can solve specific technical problems and improve developer productivity. However, they do not define the architecture.
 
-Understanding this distinction is important because it keeps the focus on what actually matters.
+You can build a system using the newest frameworks and still end up with unclear responsibilities, weak architectural boundaries, and uncontrolled dependencies.
 
-Architecture is about structure. Tools are just implementation details.
+You can also build a system using simple tools while maintaining a clear, understandable, and well-structured architecture.
+
+The difference is not the technology.
+
+It is the architectural decisions that determine how responsibilities are organized, how boundaries are protected, and how dependencies are allowed to flow.
+
+Understanding this distinction is essential because it keeps the focus on what actually matters.
+
+Architecture defines the structure.
+
+Technology implements it.
 
 ---
 

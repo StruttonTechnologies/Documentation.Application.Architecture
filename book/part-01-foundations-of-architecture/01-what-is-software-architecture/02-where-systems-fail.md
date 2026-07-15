@@ -1,34 +1,36 @@
 # Where Systems Fail
 
-Most systems do not fail because they are complex.
+Most software systems do not fail because they become too complex.
 
-They fail because structure is lost.
+They fail because they gradually lose their structure.
 
-It rarely happens all at once. The system usually starts in a reasonable state. Responsibilities are somewhat clear. Boundaries exist, even if they are not formally defined.
+This rarely happens all at once. A system usually begins in a reasonable state. Responsibilities are generally clear. Architectural boundaries exist, even if they have not yet been formally defined.
 
 Then small decisions begin to accumulate.
 
-A piece of logic is added in the wrong place because it is faster. A dependency is introduced because it avoids writing additional code. A boundary is bypassed because it feels unnecessary in the moment.
+A piece of logic is placed where it does not belong because it is faster. A dependency is introduced because it avoids additional work. An architectural boundary is bypassed because it seems unnecessary in the moment.
 
-None of these decisions seem significant on their own.
+None of these decisions appear significant on their own.
 
-Over time, they stack.
+Over time, however, they accumulate.
 
-Responsibilities begin to overlap. It becomes harder to tell where something belongs. Dependencies start pointing in multiple directions. A change in one area affects behavior in another area that was not expected.
+Responsibilities begin to blur. It becomes harder to determine where new functionality belongs. Dependencies begin pointing in multiple directions. Changes in one part of the system unexpectedly affect behavior somewhere else.
 
-At some point, the system crosses a line.
+Eventually, the system reaches a tipping point.
 
-Developers stop trusting changes. Even small updates feel risky. Fixing one issue introduces another. Understanding how something works requires tracing through multiple layers of unrelated logic.
+Developers stop trusting change. Even small updates feel risky. Fixing one problem introduces another. Understanding a single feature requires tracing through multiple architectural units and unrelated dependencies.
 
-This is the point where the system is often described as difficult or fragile.
+This is the point where a system is often described as fragile.
 
 It is important to understand what actually caused it.
 
-This is not a scaling problem. It is not caused by the system being too large.
+This is not primarily a scaling problem.
 
-It is a structure problem.
+It is not caused by the application becoming too large.
 
-Architecture exists to prevent this slow breakdown by enforcing clear responsibilities and controlled dependencies from the beginning and maintaining them over time.
+It is the gradual erosion of architectural structure.
+
+Software architecture exists to prevent that erosion by defining clear responsibilities, protecting those responsibilities with architectural boundaries, controlling dependencies, and preserving that structure as the system evolves.
 
 ---
 
