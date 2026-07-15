@@ -16,4 +16,4 @@ Interaction models and domain models provide value only when each remains respon
 
 [← Why This Matters](04-why-this-matters.md) |
 [Table of Contents](../../04-table-of-contents.md) |
-[Presentation and Client Architecture →](../08-presentation-and-client-architecture/README.md)
+[Presentation and Client Architecture →](../09-presentation-and-client-architecture/README.md)
